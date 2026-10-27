@@ -1,0 +1,49 @@
+{
+  "id": 14,
+  "task_type": "multi_reference",
+  "reference_images": [
+    {
+      "file": "reference_1.png",
+      "role": "person_identity_face_and_appearance",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Elderly_Gambian_woman_face_portrait.jpg",
+      "license": "CC BY-SA 2.0"
+    },
+    {
+      "file": "reference_2.png",
+      "role": "vintage_camera_shape_and_details",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Black_and_White_Image_of_Vintage_Kodak_Camera.jpg",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "file": "reference_3.png",
+      "role": "indigo_textile_pattern_for_jacket",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Morris_Kennet_indigo_printed_textile_1883.jpg",
+      "license": "Public domain"
+    },
+    {
+      "file": "reference_4.png",
+      "role": "wooden_stool_design",
+      "source_page": "https://commons.wikimedia.org/wiki/File:This_stool_was_manufactured_by_Biltmore_Industries_in_Asheville,_NC._(1001f80b-d79b-428f-91d5-b7dc680c93e0).jpg",
+      "license": "Public domain"
+    },
+    {
+      "file": "reference_5.png",
+      "role": "photography_studio_environment",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Aka_Drammen_studio_2019_(3).jpg",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "prompt": {
+    "zh": "创作一张自然光下的纪实环境人像，并准确绑定五张参考图的不同信息。参考图1中的同一位女性坐在参考图4中的同款雕花木凳上，身穿一件剪裁简洁的夹克，夹克面料严格采用参考图3的靛蓝、米白与金黄色植物纹样；她在胸前用双手稳稳拿着参考图2中的同款复古柯达相机，并微笑着看向镜头。场景采用参考图5中的白色无缝背景、木地板、灯架布局和明亮摄影棚空间，但不得复制其中的彩色反光板。严格保持人物的身份、面部结构、肤色、年龄特征、头巾和神态；准确保留相机的黑色机身、镜头形状、取景器和主要机械结构。双手必须具有自然的五指结构并真实接触相机，人物、服装、木凳、相机与环境的尺度、光照和阴影应一致。不要改变人物身份，不要复制相机或木凳，不要添加其他人物、摄影器材、文字或品牌标识。",
+    "en": "Create a naturally lit documentary environmental portrait with distinct information accurately bound from all five references. Seat the same woman from reference 1 on the carved wooden stool from reference 4. Dress her in a simply tailored jacket whose fabric strictly follows the indigo, warm-white and golden botanical pattern of reference 3. She holds the same vintage Kodak camera from reference 2 securely at chest height with both hands and smiles toward the viewer. Use the white seamless backdrop, wooden floor, lighting-stand arrangement and bright studio space from reference 5, but do not copy its colorful reflector. Strictly preserve the woman's identity, facial structure, skin tone, age characteristics, head wrap and expression; faithfully retain the camera's black body, lens shape, viewfinder and main mechanical structure. Both hands must have natural five-finger anatomy and make plausible contact with the camera, with consistent scale, lighting and shadows across the person, jacket, stool, camera and environment. Do not change her identity, duplicate the camera or stool, or add other people, photographic equipment, text or branding."
+  },
+  "evaluation_focus": [
+    "five_reference_binding",
+    "human_identity_preservation",
+    "pattern_transfer",
+    "reference_object_fidelity",
+    "hand_object_interaction",
+    "human_anatomy",
+    "cross_reference_integration"
+  ]
+}

@@ -1,0 +1,9 @@
+external_python: /home/xianxiaole/miniconda3/envs/yankai_outpainting/bin/python
+cpu_offload: false
+research_path: /home/xianxiaole/Code/yankai/projects/pythonlearn/Image-Generate-Filed/Outpainting/research/PQDiff/PQDiff
+checkpoint: /home/xianxiaole/Code/yankai/projects/Data/Model/Outpainting/PQDiff/nnet_ema.pth
+base_model: /home/xianxiaole/Code/yankai/projects/Data/Model/Outpainting/stable-diffusion-v1.5-inpainting
+steps: 50
+seed: 42
+startup_timeout: 900
+generation_timeout: 3600

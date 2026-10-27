@@ -1,0 +1,20 @@
+{
+  "id": 7,
+  "task_type": "ti2i",
+  "reference_image": "reference.png",
+  "source": {
+    "description": "Red coffee cup and notebook and pencil with philodendron plant on wooden table",
+    "url": "https://images.openai.com/static-rsc-4/fYHkBQOhKv60W4okT4OPV46MyFpIrbU_4cJ2dyr8lBWwq0beGlXnxzGkSZ5hXQHtYeavoiel5SJrkl8YmDEzp4BhFRuO8Y898mTKVYXtFf450h2w8kKnLo0dhxhUqrGSweCB_NN1fmpap4QDLKfvTxlfNW5gevdjYHUefSUWu66audCXm_fZBQWoHqS84IeR?purpose=fullsize"
+  },
+  "prompt": {
+    "zh": "移走红色陶瓷马克杯，换成一个装有冰柠檬水的透明玻璃杯，杯中可见两片柠檬。移走最右侧角落里的小盆栽。保持笔记本、桌面质感、拍摄角度及原有光照不变。玻璃杯必须投下逼真的阴影，并呈现出符合物理规律的折射效果。不要添加任何其他物体。",
+    "en": "Remove the red ceramic mug and replace it with a transparent glass filled with iced lemon water and two visible lemon slices. Remove the small potted plant from the far-right corner. Keep the notebook, desk texture, camera angle and original lighting unchanged. The glass must cast a realistic shadow and show physically plausible refraction. Do not introduce any additional objects."
+  },
+  "evaluation_focus": [
+    "object_replacement",
+    "object_removal",
+    "background_preservation",
+    "transparent_materials",
+    "exact_object_counting"
+  ]
+}

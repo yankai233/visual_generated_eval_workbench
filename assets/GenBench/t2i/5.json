@@ -1,0 +1,15 @@
+{
+  "id": 5,
+  "task_type": "t2i",
+  "prompt": {
+    "zh": "创作一张复古植物主题的水彩海报，背景采用暖奶油色纸张。画面中，一只蜂鸟悬停在两朵红色扶桑花和三片绿叶旁；线条以细腻的墨线勾勒，水彩颜料呈现出自然的晕染效果。海报顶部以优雅的深绿色衬线体大写字母，标出标题“GARDEN OF WONDERS”；底部则标出副标题“BOTANICAL STUDIES · NO. 08”。整体采用居中的排版布局，配色克制，字体清晰易读，除上述内容外，不添加任何其他文字。",
+    "en": "Create a vintage botanical watercolor poster on warm cream paper. A hummingbird hovers beside two red hibiscus flowers and three green leaves, with delicate ink outlines and visible watercolor pigment blooms. At the top, render the exact title “GARDEN OF WONDERS” in elegant dark-green serif capitals. At the bottom, render the exact subtitle “BOTANICAL STUDIES · NO. 08”. Centered editorial layout, restrained colors, legible typography, no additional text."
+  },
+  "evaluation_focus": [
+    "text_rendering",
+    "exact_object_counting",
+    "watercolor_style",
+    "editorial_layout",
+    "negative_constraints"
+  ]
+}

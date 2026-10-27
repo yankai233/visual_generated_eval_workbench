@@ -1,0 +1,8 @@
+# Hugging Face cache 根目录；工作台会自动解析 refs/main 对应的 snapshot
+model_path: /home/xianxiaole/.cache/huggingface/hub/models--Qwen--Qwen-Image-Edit-2511
+torch_dtype: bfloat16
+local_files_only: true
+cpu_offload: false
+guidance_scale: 1.0
+true_cfg_scale: 4.0
+num_images_per_prompt: 1

@@ -1,0 +1,42 @@
+{
+  "id": 12,
+  "task_type": "multi_reference",
+  "reference_images": [
+    {
+      "file": "reference_1.png",
+      "role": "red_chair_design",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Red_Chair_Iceland_01.jpg",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "file": "reference_2.png",
+      "role": "blue_vase_design",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Vase_bleu_vicomte1.jpg",
+      "license": "Public domain"
+    },
+    {
+      "file": "reference_3.png",
+      "role": "metal_floor_lamp_design",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Floor_lamp_-_Walter_von_Nessen_(39733453212).jpg",
+      "license": "CC BY-SA 2.0"
+    },
+    {
+      "file": "reference_4.png",
+      "role": "geometric_kilim_pattern_and_colors",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Second_half_19th_century_Shirvan_Kilim.png",
+      "license": "Public domain"
+    }
+  ],
+  "prompt": {
+    "zh": "生成一张高端室内设计杂志风格的方形照片，同时准确融合四张参考图。将参考图1中造型和红色材质一致的椅子放在浅灰色微水泥墙前；在椅子右侧放置一张小型圆形橡木边桌，并将参考图2中具有相同轮廓、蓝色纹样和陶瓷质感的花瓶置于桌面中央；把参考图3中的金属落地灯放在椅子左后方；在地面铺设一张矩形地毯，其几何纹样和红、黑、米白配色严格取自参考图4。四个参考元素必须彼此独立、无遮挡、比例合理，使用从左侧窗户射入的柔和晨光和一致的接触阴影。画面中只能有一把椅子、一张边桌、一个花瓶、一盏落地灯和一张地毯，不要添加鲜花、书籍或其他装饰。",
+    "en": "Generate a square high-end interior-design magazine photograph that accurately combines all four references. Place a chair matching the shape and red material of reference 1 in front of a light-gray microcement wall. Put a small round oak side table to the chair's right, with the vase from reference 2 centered on it, preserving its silhouette, blue pattern and ceramic finish. Position the metal floor lamp from reference 3 behind and to the left of the chair. Cover the floor with one rectangular rug whose geometric motifs and red, black and warm-white palette come strictly from reference 4. Keep all referenced elements separate, unobstructed and realistically scaled, with soft morning light from a left window and consistent contact shadows. Show only one chair, one side table, one vase, one floor lamp and one rug; add no flowers, books or other decoration."
+  },
+  "evaluation_focus": [
+    "four_reference_binding",
+    "multi_object_fidelity",
+    "spatial_relationships",
+    "material_preservation",
+    "scale_consistency",
+    "negative_constraints"
+  ]
+}

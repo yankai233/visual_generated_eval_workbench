@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>扩图结果对比</title>
+    <link rel="stylesheet" href="/static/styles.css?v=20261019-7" />
+    <link rel="stylesheet" href="/static/outpainting-compare.css?v=3" />
+    <link rel="stylesheet" href="/static/auxiliary-window.css?v=3" />
+  </head>
+  <body>
+    <header class="outpaint-header">
+      <div class="outpaint-title"><span class="brand-mark" aria-hidden="true">V</span><h1>扩图结果对比</h1></div>
+      <nav><button class="secondary-button" type="button" data-auxiliary-trigger>辅助工具</button><a class="secondary-button" href="/compare">结果对比</a><a class="secondary-button" href="/">返回工作台</a></nav>
+    </header>
+    <main class="outpaint-main">
+      <section class="panel outpaint-controls">
+        <div id="runChoices" class="run-choices" aria-label="选择方法"></div>
+        <div class="control-actions">
+          <input id="queryInput" type="search" placeholder="样本 ID / Prompt" aria-label="搜索样本" />
+          <select id="pageSizeSelect" aria-label="每页样本数"><option value="8" selected>8 / 页</option><option value="12">12 / 页</option><option value="20">20 / 页</option></select>
+          <button id="refreshBtn" class="secondary-button" type="button">刷新</button>
+          <strong id="rowCount"></strong>
+        </div>
+      </section>
+      <p id="pageError" class="inline-error hidden" role="alert"></p>
+      <section id="matrixViewport" class="panel outpaint-matrix" aria-label="扩图结果对比表"><div class="empty-state">加载中…</div></section>
+      <nav class="pagination"><button id="prevBtn" class="secondary-button" type="button">上一页</button><span id="pageLabel">1 / 1</span><button id="nextBtn" class="secondary-button" type="button">下一页</button></nav>
+    </main>
+    <dialog id="imageDialog" class="outpaint-image-dialog">
+      <button id="closeImageBtn" class="image-close" type="button" aria-label="关闭">×</button>
+      <div id="largeImageStage" class="large-image-stage"><img id="largeImage" alt="扩图结果预览" /></div>
+    </dialog>
+    <script type="module" src="/static/outpainting-compare.js?v=5"></script>
+  </body>
+</html>

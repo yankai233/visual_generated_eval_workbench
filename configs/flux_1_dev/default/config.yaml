@@ -1,0 +1,8 @@
+# Hugging Face cache 根目录；工作台会自动解析 refs/main 对应的 snapshot
+model_path: /home/xianxiaole/.cache/huggingface/hub/models--black-forest-labs--FLUX.1-dev
+torch_dtype: bfloat16
+local_files_only: true
+cpu_offload: false
+guidance_scale: 3.5
+max_sequence_length: 512
+num_images_per_prompt: 1

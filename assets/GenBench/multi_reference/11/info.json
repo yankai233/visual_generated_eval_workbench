@@ -1,0 +1,29 @@
+{
+  "id": 11,
+  "task_type": "multi_reference",
+  "reference_images": [
+    {
+      "file": "reference_1.png",
+      "role": "lighthouse_content_and_geometry",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Cape_May_Lighthouse_September_2020_002.jpg",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "file": "reference_2.png",
+      "role": "painting_style_palette_and_brushwork",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_Starry_Night.jpg",
+      "license": "Public domain"
+    }
+  ],
+  "prompt": {
+    "zh": "以参考图1中的灯塔及其准确轮廓、塔身比例、窗户位置和红色顶部结构为主体，创作一幅夜间海岸画面；将参考图2《星月夜》的深蓝与金黄色调、旋涡状天空、厚重而有节奏的笔触应用到整幅作品。灯塔必须清晰可辨且几何结构稳定，坐落在岩石海岸上，灯光在海面形成一条金色反射。不要复制参考图2中的村庄或柏树，不要添加第二座灯塔，也不要产生照片与绘画风格割裂的区域。",
+    "en": "Create a nocturnal coastal artwork centered on the lighthouse from reference 1, preserving its exact silhouette, tower proportions, window placement and red upper structure. Apply the deep-blue and golden palette, swirling sky and rhythmic impasto-like brushwork of The Starry Night in reference 2 across the entire image. Keep the lighthouse clearly recognizable and geometrically stable on a rocky coast, with its beam creating one golden reflection on the sea. Do not copy the village or cypress from reference 2, do not add a second lighthouse, and avoid any split between photographic and painted regions."
+  },
+  "evaluation_focus": [
+    "content_style_disentanglement",
+    "structure_preservation",
+    "global_style_transfer",
+    "negative_constraints",
+    "single_subject_constraint"
+  ]
+}

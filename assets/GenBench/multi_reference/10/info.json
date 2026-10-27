@@ -1,0 +1,29 @@
+{
+  "id": 10,
+  "task_type": "multi_reference",
+  "reference_images": [
+    {
+      "file": "reference_1.png",
+      "role": "tabby_cat_identity_and_coat",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Tabby-cat.jpg",
+      "license": "Public domain"
+    },
+    {
+      "file": "reference_2.png",
+      "role": "golden_retriever_identity_and_coat",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Dülmen,_Hausdülmen,_Golden_Retriever_--_2022_--_5530.jpg",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "prompt": {
+    "zh": "创作一张写实摄影风格的方形图像：参考图1中的同一只虎斑猫坐在画面左侧，参考图2中的同一只金毛犬坐在画面右侧，它们并肩位于湖边的木质码头上，在蓝调时刻一起看向镜头。准确保留两只动物各自的脸部特征、毛色、斑纹、耳形和身体比例；统一环境光、接触阴影与景深。画面中必须恰好只有一只猫和一只狗，不得融合两者特征，不得增加其他动物。",
+    "en": "Create a square photorealistic image in which the same tabby cat from reference 1 sits on the left and the same golden retriever from reference 2 sits on the right, side by side on a wooden lakeside pier at blue hour, both looking toward the camera. Faithfully preserve each animal's facial features, coat color, markings, ear shape and body proportions; use coherent environmental lighting, contact shadows and depth of field. Show exactly one cat and one dog, do not blend their traits, and add no other animals."
+  },
+  "evaluation_focus": [
+    "multiple_subject_identity",
+    "attribute_binding",
+    "left_right_composition",
+    "exact_subject_count",
+    "photorealistic_integration"
+  ]
+}

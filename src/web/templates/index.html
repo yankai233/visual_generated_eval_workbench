@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Visual Generation Eval Workbench</title>
+    <link rel="stylesheet" href="/static/styles.css?v=20261025-1" />
+    <link rel="stylesheet" href="/static/workbench.css?v=11" />
+    <link rel="stylesheet" href="/static/auxiliary-window.css?v=3" />
+  </head>
+  <body class="workbench-page">
+    <header class="topbar">
+      <div class="workbench-brand">
+        <span class="brand-mark" aria-hidden="true">V</span>
+        <h1>图像生成可视化评估工作台</h1>
+      </div>
+      <div class="workbench-header-actions">
+        <div id="systemStatus" class="system-status" title="连接中" aria-label="连接中"><span aria-hidden="true"></span><strong id="serviceStatusText">连接中</strong></div>
+        <nav class="workbench-toolbar" aria-label="工作台导航">
+          <button id="gpuUsageBtn" class="secondary-button" type="button">查看 GPU 使用情况</button>
+          <button id="timingBtn" class="secondary-button" type="button">耗时统计</button>
+          <button class="secondary-button" type="button" data-auxiliary-trigger>辅助工具</button>
+          <a class="secondary-button" href="/compare">结果对比</a>
+          <a class="secondary-button" href="/outpainting-compare">扩图对比</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div id="workspaces" class="workspaces"></div>
+      <div class="add-model-row"><button id="addModelBtn" class="secondary-button">＋ 添加 model</button></div>
+      <section id="sharedProgress" class="panel shared-panel hidden" aria-label="运行状态">
+        <div class="section-heading"><h2>运行状态</h2><div class="shared-controls">
+          <select id="controlModel" aria-label="控制模型"><option value="all">全部模型</option></select>
+          <button id="pauseAllBtn" class="secondary-button" disabled>暂停</button>
+          <button id="resumeAllBtn" class="secondary-button" disabled>继续</button>
+          <button id="cancelAllBtn" class="danger-button" disabled>取消</button>
+        </div></div>
+        <div id="workspaceOutputs" class="workbench-outputs"></div>
+      </section>
+      <section id="sharedResults" class="panel shared-panel hidden" aria-label="生成结果">
+        <div class="section-heading"><h2>生成结果</h2><a class="secondary-button" href="/outpainting-compare">扩图结果对比</a></div>
+        <div id="modelResults" class="workbench-outputs"></div>
+      </section>
+    </main>
+
+    <template id="workspaceTemplate">
+      <link rel="stylesheet" href="/static/styles.css?v=20261019-7" />
+      <link rel="stylesheet" href="/static/workbench.css?v=11" />
+      <section class="workspace-grid">
+        <article class="panel pipeline-panel">
+          <div class="section-heading">
+            <h2>Pipeline</h2><button id="newPipelineBtn" class="text-button" type="button">＋ 添加 Pipeline</button>
+          </div>
+          <fieldset id="pipelineFields" class="edit-fields"><div id="pipelineCards" class="pipeline-cards"></div></fieldset>
+        </article>
+
+        <article class="panel input-panel">
+          <div class="section-heading">
+            <h2>输入样本</h2>
+            <div class="segmented" role="group" aria-label="输入模式">
+              <button class="mode-btn" data-mode="benchmark" aria-pressed="false">Benchmark</button>
+              <button class="mode-btn active" data-mode="custom" aria-pressed="true">自定义</button>
+            </div>
+          </div>
+
+          <fieldset id="inputFields" class="edit-fields" tabindex="0" aria-label="输入样本内容，可上下滚动">
+          <div id="benchmarkMode" class="hidden">
+            <div id="benchmarkList" class="benchmark-list" aria-label="可多选的 Benchmark 列表"></div>
+          </div>
+
+          <div id="customMode">
+            <div class="field-row">
+              <label class="field grow">
+                <span>任务类型</span>
+                <select id="taskType">
+                  <option value="T2I">T2I · 文生图</option>
+                  <option value="TI2I">TI2I · 文本 + 单图</option>
+                  <option value="MultiReference">多参考图生成</option>
+                  <option value="Outpainting">Outpainting · 扩图</option>
+                </select>
+              </label>
+              <label class="field small-field">
+                <span>随机种子</span>
+                <input id="seedInput" type="number" value="42" />
+              </label>
+            </div>
+            <section id="imageUploadField" class="reference-workspace hidden" aria-label="参考图管理">
+              <div class="reference-heading">
+                <strong id="uploadLabel">输入图像</strong>
+                <label class="ratio-toggle"><input id="autoRatioInput" type="checkbox" checked />比例自动识别</label>
+              </div>
+              <input id="imageInput" class="visually-hidden" type="file" accept="image/png,image/jpeg,image/webp,image/bmp" tabindex="-1" />
+              <div id="imageDropZone" class="reference-layout">
+                <div class="reference-library">
+                  <div id="referenceSlots" class="reference-slots" aria-label="参考图槽位"></div>
+                  <div class="reference-footer"><span id="referenceCount" aria-live="polite">已上传 0/1 张参考图</span><button id="clearImagesBtn" type="button" class="text-button danger-text" disabled>清空</button></div>
+                </div>
+                <div id="referencePreview" class="reference-preview"><span>点击添加图片<br />或拖拽到此处</span></div>
+              </div>
+            </section>
+            <div class="field prompt-field">
+              <label for="promptInput">Prompt</label>
+              <div class="prompt-box">
+                <textarea id="promptInput" rows="5" placeholder="描述希望生成的图像……"></textarea>
+                <div class="prompt-actions"><button id="clearPromptBtn" type="button" class="text-button">清空</button><button id="expandPromptBtn" type="button" class="text-button">放大编辑 ↗</button></div>
+              </div>
+            </div>
+            <label class="field">
+              <span>Negative Prompt</span>
+              <textarea id="negativePromptInput" rows="2" placeholder="可选"></textarea>
+            </label>
+            <div class="field-row">
+              <label class="field grow"><span>宽度</span><input id="widthInput" type="number" min="64" max="4096" value="1024" /></label>
+              <label class="field grow"><span>高度</span><input id="heightInput" type="number" min="64" max="4096" value="1024" /></label>
+              <label class="field grow"><span>去噪步数</span><input id="stepsInput" type="number" min="1" max="1000" value="28" /></label>
+            </div>
+          </div>
+          </fieldset>
+        </article>
+
+        <aside class="panel run-panel">
+          <div class="section-heading">
+            <h2>Run</h2>
+          </div>
+          <div class="run-stats">
+            <div><span>Model</span><strong id="pipelineTotal">0</strong></div>
+            <div><span>Samples</span><strong id="sampleTotal">0</strong></div>
+          </div>
+          <div class="summary-box">
+            <span>生成单元</span>
+            <strong id="unitTotal">0</strong>
+          </div>
+          <label class="save-images-option" title="关闭后仅在内存保留临时预览，最多 1 小时；服务重启或容量回收后失效"><input id="saveImagesInput" type="checkbox" checked />保存图像</label>
+          <label id="outputLocationField" class="field output-location"><span>保存位置</span><output id="outputLocation"></output></label>
+          <button id="runBtn" class="primary-button" disabled>开始生成 <span>→</span></button>
+        </aside>
+      </section>
+
+    <dialog id="benchmarkSamplesDialog" class="yaml-dialog benchmark-samples-dialog" aria-labelledby="benchmarkDialogTitle">
+      <form method="dialog" class="dialog-card">
+        <div class="section-heading"><h2 id="benchmarkDialogTitle">筛选样本</h2><button class="icon-button" value="cancel" aria-label="关闭">×</button></div>
+        <div class="sample-filter-toolbar">
+          <input id="sampleSearch" type="search" placeholder="ID 或 Prompt" aria-label="搜索样本" />
+          <select id="sampleTaskFilter" aria-label="筛选任务类型"><option value="">全部任务</option><option value="T2I">T2I</option><option value="TI2I">TI2I</option><option value="MultiReference">多参考图</option></select>
+        </div>
+        <div class="sample-filter-toolbar">
+          <button id="allBenchmarkSamplesBtn" type="button" class="text-button" title="选择当前筛选结果，包含其他页">全选</button>
+          <button id="clearBenchmarkSamplesBtn" type="button" class="text-button" title="取消选择当前筛选结果，包含其他页">清空</button>
+          <span id="sampleCount"></span><span id="sampleFilterCount"></span>
+        </div>
+        <div id="sampleList" class="sample-list"></div>
+        <div class="sample-filter-pagination"><button id="prevSamplesBtn" type="button" class="secondary-button">上一页</button><span id="samplePageLabel">1 / 1</span><button id="nextSamplesBtn" type="button" class="secondary-button">下一页</button></div>
+        <p id="benchmarkFilterError" class="inline-error" role="alert"></p>
+        <div class="dialog-actions"><button class="secondary-button" value="cancel">取消</button><button id="applyBenchmarkSamplesBtn" type="button" class="primary-button compact">应用</button></div>
+      </form>
+    </dialog>
+    <dialog id="yamlDialog" class="yaml-dialog">
+      <form method="dialog" class="dialog-card">
+        <div class="section-heading">
+          <div><span class="step-badge">YAML</span><h2>Pipeline 配置</h2></div>
+          <button class="icon-button" value="cancel" aria-label="关闭">×</button>
+        </div>
+        <p id="yamlPipelineLabel" class="section-note"></p>
+        <label class="field"><span>配置名称</span><input id="yamlConfigName" autocomplete="off" /></label>
+        <label class="field"><span>配置内容</span><textarea id="yamlEditor" class="code-editor" spellcheck="false"></textarea></label>
+        <p id="yamlError" class="inline-error"></p>
+        <div class="dialog-actions">
+          <button class="secondary-button" value="cancel">取消</button>
+          <button id="applyYamlBtn" type="button" class="secondary-button">仅本次使用</button>
+          <button id="saveYamlBtn" type="button" class="primary-button compact">保存配置</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="promptDialog" class="yaml-dialog" aria-labelledby="promptDialogTitle">
+      <form method="dialog" class="dialog-card">
+        <div class="section-heading"><h2 id="promptDialogTitle">Prompt · 放大编辑</h2><button class="icon-button" value="cancel" aria-label="关闭">×</button></div>
+        <textarea id="expandedPromptInput" class="expanded-prompt" rows="14" aria-label="Prompt"></textarea>
+        <div class="dialog-actions"><button class="secondary-button" value="cancel">取消</button><button id="applyPromptBtn" type="button" class="primary-button compact">应用</button></div>
+      </form>
+    </dialog>
+    <div id="toast" class="toast" role="status"></div>
+    </template>
+    <template id="workspaceOutputTemplate">
+      <link rel="stylesheet" href="/static/styles.css?v=20261019-7" />
+      <link rel="stylesheet" href="/static/workbench.css?v=11" />
+      <div class="workspace-output">
+        <section id="progressSection" class="model-progress hidden">
+          <div class="model-output-heading"><strong id="workspaceOutputTitle"></strong><span id="jobStatus" class="status-pill">等待</span></div>
+          <div class="progress-layout">
+            <div>
+              <div class="progress-title"><div class="progress-metrics"><strong id="sampleProgressText">0 / 0</strong><span id="sampleAverage" class="progress-eta">平均每样本 —</span><span id="sampleEta" class="progress-eta">估算中</span></div></div>
+              <div class="progress-track" role="progressbar" aria-label="样本进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="sampleProgressBar" class="progress-fill"></div></div>
+            </div>
+            <div id="gpuProgressList" class="gpu-progress-list"></div>
+          </div>
+          <details id="errorDetails" class="error-details hidden">
+            <summary>失败信息</summary>
+            <pre id="errorText"></pre>
+          </details>
+        </section>
+      </div>
+    </template>
+    <template id="modelResultsTemplate">
+      <link rel="stylesheet" href="/static/styles.css?v=20261019-7" />
+      <link rel="stylesheet" href="/static/workbench.css?v=11" />
+      <div class="workspace-output">
+        <section id="resultsSection" class="model-results hidden">
+          <div class="section-heading">
+            <h3 id="modelResultsTitle"></h3>
+            <span id="resultCount">0 张图像</span>
+          </div>
+          <div id="resultGallery" class="result-gallery"></div>
+        </section>
+      </div>
+      <dialog id="imageViewerDialog" class="image-viewer-dialog" aria-labelledby="imageViewerTitle">
+        <div class="image-viewer-header"><strong id="imageViewerTitle"></strong><button id="closeImageViewerBtn" class="secondary-button" type="button">关闭 ×</button></div>
+        <div class="image-viewer-stage"><img id="viewerImage" alt="生成结果" /></div>
+        <div class="image-viewer-footer"><p id="imageViewerError" class="inline-error" role="alert"></p><button id="saveResultBtn" class="secondary-button" type="button">保存到项目</button><button id="downloadResultBtn" class="primary-button compact" type="button">下载</button></div>
+      </dialog>
+    </template>
+    <dialog id="pipelineEditorDialog" class="pipeline-editor-dialog" aria-labelledby="pipelineEditorTitle">
+      <form method="dialog" class="dialog-card">
+        <div class="section-heading"><h2 id="pipelineEditorTitle">Pipeline · Python</h2><button class="icon-button" value="cancel" aria-label="关闭">×</button></div>
+        <div class="pipeline-editor-fields">
+          <label class="field"><span>名称</span><input id="pipelineSourceName" value="my_pipeline" autocomplete="off" /></label>
+          <label class="field"><span>已保存的 Pipeline</span><select id="managedPipeline"><option value="">新建</option></select></label>
+          <button id="loadPipelineSourceBtn" class="secondary-button" type="button">载入</button>
+        </div>
+        <div class="pipeline-code-columns">
+          <label class="field"><span>src/pipelines/{名称}/pipeline.py</span><textarea id="pipelineSourceCode" class="code-editor" spellcheck="false" aria-label="Python 代码"></textarea></label>
+          <label class="field"><span>configs/{名称}/default/config.yaml</span><textarea id="pipelineSourceYaml" class="code-editor" spellcheck="false" aria-label="默认 YAML"></textarea></label>
+        </div>
+        <label class="field"><span>保存口令</span><input id="pipelineEditorToken" type="password" autocomplete="off" /></label>
+        <p class="pipeline-security-note">保存并注册会在服务器执行 Python。口令位于 configs/.pipeline-editor-token（或环境变量 WORKBENCH_PIPELINE_TOKEN）。</p>
+        <p id="pipelineEditorError" class="inline-error" role="alert"></p>
+        <div class="dialog-actions"><button class="secondary-button" value="cancel">取消</button><button id="savePipelineSourceBtn" class="primary-button compact" type="button">保存并注册</button></div>
+      </form>
+    </dialog>
+    <dialog id="gpuMonitorDialog" class="gpu-monitor-dialog" aria-labelledby="gpuMonitorTitle">
+      <div class="gpu-monitor-heading"><h2 id="gpuMonitorTitle">GPU 使用情况</h2><button id="closeGpuMonitorBtn" class="secondary-button" type="button">关闭 ×</button></div>
+      <p id="gpuMonitorMessage" role="status"></p>
+      <div class="gpu-monitor-scroll"><table id="gpuMonitorTable" hidden><thead><tr><th scope="col">GPU</th><th scope="col">显存</th><th scope="col">GPU 利用率</th><th scope="col">温度</th><th scope="col">功耗</th></tr></thead><tbody id="gpuMonitorRows"></tbody></table></div>
+    </dialog>
+    <dialog id="timingDialog" class="yaml-dialog timing-dialog">
+      <form method="dialog" class="dialog-card">
+        <div class="section-heading"><h2>Benchmark 平均耗时</h2><button class="icon-button" value="cancel" aria-label="关闭">×</button></div>
+        <div class="timing-table-wrap">
+          <table class="timing-table">
+            <thead id="timingTableHead"><tr><th>模型</th></tr></thead>
+            <tbody id="timingTableBody"><tr><td class="timing-empty">加载中</td></tr></tbody>
+          </table>
+        </div>
+      </form>
+    </dialog>
+    <div id="appError" class="app-error hidden" role="alert"></div>
+    <script type="module" src="/static/app.js?v=20261025-2"></script>
+  </body>
+</html>
+

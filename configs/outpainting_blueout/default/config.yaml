@@ -1,0 +1,15 @@
+external_python: /home/xianxiaole/miniconda3/envs/yankai_outpainting/bin/python
+cpu_offload: false
+research_path: /home/xianxiaole/Code/yankai/projects/pythonlearn/Image-Generate-Filed/Outpainting/research/BlouOut/BlueOut
+global_checkpoint: /home/xianxiaole/Code/yankai/projects/Data/Model/Outpainting/BlueOut/stage1_global_unet.pt
+main_checkpoint: /home/xianxiaole/Code/yankai/projects/Data/Model/Outpainting/BlueOut/stage2_main_adapters.pt
+base_model: /home/xianxiaole/Code/yankai/projects/Data/Model/Outpainting/stable-diffusion-v1.5-inpainting
+instdiff_model: /home/xianxiaole/Code/yankai/projects/Data/Model/Outpainting/instancediffusion_sd15
+precision: fp16
+guidance_scale: 3.0
+eta: 0.0
+global_token_scale: 1.0
+local_prompt: harmonized painting, high resolution, best quality, high quality, harmonized simple background
+negative_prompt: ugly, nsfw, worst quality, watermark, signature, logo
+startup_timeout: 1200
+generation_timeout: 7200

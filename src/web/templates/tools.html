@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>辅助工具</title>
+    <link rel="stylesheet" href="/static/styles.css?v=20261019-7" />
+    <link rel="stylesheet" href="/static/tools.css?v=3" />
+  </head>
+  <body>
+    <header class="tools-header"><h1>辅助工具</h1><nav><a class="secondary-button" href="/compare">结果对比</a><a class="secondary-button" href="/">返回工作台</a></nav></header>
+    <main class="tools-main">
+      <div class="tool-tabs" role="tablist" aria-label="辅助工具">
+        <button id="translateTab" role="tab" aria-selected="true" aria-controls="translationPanel" data-tool="translate">翻译</button>
+        <button id="markdownTab" role="tab" aria-selected="false" aria-controls="markdownPanel" data-tool="markdown" tabindex="-1">Markdown</button>
+      </div>
+      <section id="translationPanel" class="panel tool-panel" role="tabpanel" aria-labelledby="translateTab">
+        <div class="tool-toolbar">
+          <label class="field"><span>源语言</span><select id="sourceLanguage" aria-label="源语言"><option value="auto">自动检测</option></select></label>
+          <button id="swapLanguagesBtn" class="secondary-button" aria-label="交换语言" disabled>⇄</button>
+          <label class="field"><span>目标语言</span><select id="targetLanguage" aria-label="目标语言"><option value="en">English</option></select></label>
+          <span id="translationMode" class="tool-status" role="status">正在连接…</span>
+        </div>
+        <div id="translationGrid" class="translation-grid">
+          <label class="field"><span>原文</span><textarea id="translationInput" maxlength="5000" placeholder="输入需要翻译的文本…"></textarea></label>
+          <label id="translationResultField" class="field hidden"><span>译文</span><textarea id="translationOutput" readonly placeholder="译文将在这里显示"></textarea></label>
+        </div>
+        <p id="translationError" class="inline-error hidden" role="alert"></p>
+        <div class="tool-actions">
+          <button id="translateBtn" class="primary-button compact hidden" disabled>翻译</button>
+          <button id="copyTranslationBtn" class="secondary-button hidden" disabled>复制译文</button>
+          <button id="clearTranslationBtn" class="text-button">清空</button>
+          <span id="translationCount" class="tool-status">0 / 5000</span>
+        </div>
+      </section>
+      <section id="markdownPanel" class="panel tool-panel hidden" role="tabpanel" aria-labelledby="markdownTab">
+        <div class="tool-toolbar markdown-toolbar">
+          <select id="markdownFileSelect" aria-label="已保存的 Markdown 文件"><option value="">打开已保存文件…</option></select>
+          <button id="refreshFilesBtn" class="secondary-button" aria-label="刷新文件列表">刷新</button>
+          <button id="newMarkdownBtn" class="secondary-button">新建</button>
+          <button id="importMarkdownBtn" class="secondary-button">导入 .md</button>
+          <input id="markdownImport" type="file" accept=".md,.markdown,text/markdown,text/plain" class="hidden" />
+        </div>
+        <div class="tool-toolbar markdown-save-toolbar">
+          <input id="markdownFilename" value="untitled.md" aria-label="Markdown 文件名" maxlength="128" />
+          <button id="saveMarkdownBtn" class="primary-button compact">保存到项目</button>
+          <button id="downloadMarkdownBtn" class="secondary-button">下载</button>
+          <span id="markdownStatus" class="tool-status" role="status">未保存</span>
+        </div>
+        <div class="markdown-grid">
+          <label class="field"><span>编辑</span><textarea id="markdownEditor" maxlength="500000" spellcheck="false" placeholder="# 标题&#10;&#10;开始编写 Markdown…"></textarea></label>
+          <div class="field"><span title="预览不执行脚本或原始 HTML，也不加载远程图片">预览</span><iframe id="markdownPreview" title="Markdown 预览" sandbox=""></iframe></div>
+        </div>
+        <p id="markdownError" class="inline-error hidden" role="alert"></p>
+      </section>
+    </main>
+    <script type="module" src="/static/tools.js?v=20261024-1"></script>
+  </body>
+</html>

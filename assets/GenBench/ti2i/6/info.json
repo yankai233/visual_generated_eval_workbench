@@ -1,0 +1,20 @@
+{
+  "id": 6,
+  "task_type": "ti2i",
+  "reference_image": "reference.png",
+  "source": {
+    "description": "Mini vs Full Tummy Tuck in Tampa: Which Fits Your Goals?",
+    "url": "https://images.openai.com/static-rsc-4/pFbwxghMYs68m8ZjGoGtizhAtG2gr0E7vZ08IfmTZm_EACnvuZNNDpT2-XoVjBqrE9xtQOb9Lw_z0Du76X6izm1DPcXP8rnU8DfuhByq_YszcSN1fO8mcZiogG50qnv7wN3VDDFPineURr_lSJduiheL0-8wiHLSU0gNvLqXGaBigxh8Sj7bkxJ5nfo1lRw2?purpose=fullsize"
+  },
+  "prompt": {
+    "zh": "将背景替换为“黄金时刻”下巴黎街头一家精致的咖啡馆。保持人物原有的身份特征、面部五官、发型、姿态、服饰、身体比例及表情。使新环境的光照和色温与人物相契合，并添加逼真的接触阴影和自然的景深效果。请勿改动人物本身，也不要添加其他前景人物。",
+    "en": "Replace the background with a sophisticated Parisian street café at golden hour. Preserve the person's exact identity, facial features, hairstyle, pose, clothing, body proportions and expression. Match the new environment's lighting and color temperature to the subject, add realistic contact shadows and natural depth of field. Do not alter the person or add other foreground people."
+  },
+  "evaluation_focus": [
+    "background_replacement",
+    "identity_preservation",
+    "subject_preservation",
+    "relighting",
+    "contact_shadows"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": 9,
+  "task_type": "ti2i",
+  "reference_image": "reference.png",
+  "source": {
+    "description": "Contoh Desain Rumah Minimalis Modern Terbaru",
+    "url": "https://images.openai.com/static-rsc-4/EFoXHoQ2PJ6X-74lbbDnp96yd58QHf3MNBkLQT7Fwlqtdg566LO_OiL2d5XhQZlmfR-W7hO6Wn6uq2NFiT5gvYzXzSTv6qUL0KSpxMRJLCyMQn3VcGaZHB5LRmYw-MG3sMwNWKUe3cHVFAOIm5h8a_jBBnGok-PUtuhjodF5Rr4BCYA1hP1Ff9jn_Kh2RcVF?purpose=fullsize"
+  },
+  "prompt": {
+    "zh": "将此客厅重新设计为温馨的日式极简风格。保留原有的空间结构、窗户位置、视角及地面边界。将现有的茶几替换为一张低矮的椭圆形橡木茶几；在沙发左侧放置一盏落地灯；在右侧窗户旁增添一株小型绿植。选用天然橡木、亚麻布艺及暖米白色调。确保物体比例真实、阴影效果统一，并留出通畅的动线空间。请勿添加其他家具。",
+    "en": "Redesign this living room in a warm Japanese minimalist style. Keep the original room geometry, window positions, camera perspective and floor boundaries. Replace the existing coffee table with a low oval oak table, place a single floor lamp to the left of the sofa, and add a small green plant near the right window. Use natural oak, linen and warm off-white materials. Ensure realistic object scale, consistent shadows and unobstructed walking space. Do not add extra furniture."
+  },
+  "evaluation_focus": [
+    "interior_redesign",
+    "geometry_preservation",
+    "controlled_object_insertion",
+    "material_editing",
+    "spatial_layout"
+  ]
+}

@@ -1,0 +1,322 @@
+[
+  {
+    "id": "robot_000001",
+    "task_type": "T2I",
+    "prompt": {
+      "en": "Documentary prototype photograph of one manufactured social robot: a human-height biped with compact hips, long shins, and broad flat feet, a trapezoidal head with two inset square sensor windows, and a rounded rectangular torso with a shallow inset chest plate. Exactly two articulated arms with flexible elbow bellows and mechanical hands, each with two fingers and one opposable thumb; mint-green enamel panels with graphite trim. Neutral idle pose, arms clear of the torso, empty hands lowered. Uncropped full-body front three-quarter view, head, both hands and feet unobscured; plain light-gray backdrop; natural material textures. No people, props, lettering, or logos.",
+      "zh": "一台实体社交机器人的原型纪实摄影：身高接近成年人，采用双足结构，髋部紧凑，小腿较长，脚掌宽大平坦。梯形头部上嵌有两个方形传感器窗口，圆角矩形躯干配有略微内凹的胸板。恰好两条关节式机械臂，肘部带柔性波纹护套，每只机械手有两根手指和一根可对握拇指。薄荷绿色搪瓷面板，石墨色饰边。机器人处于中性待机姿态，手臂与躯干保持间隔，双手空置并自然下垂。正面斜侧四分之三视角，全身完整入镜、不裁切，头部、双手和双脚无遮挡。纯浅灰色背景，呈现自然的材质纹理。画面中没有人物、道具、文字或标志。"
+    },
+    "negative_prompt": "",
+    "input_images": [],
+    "seed": 42,
+    "width": 1024,
+    "height": 1024,
+    "num_inference_steps": 28,
+    "evaluation_focus": [
+      "single_robot",
+      "head_torso_design",
+      "arm_and_digit_count",
+      "full_body_visibility",
+      "neutral_pose",
+      "material_and_color",
+      "style_adherence",
+      "image_quality"
+    ],
+    "extra": {
+      "source_file": "/home/xianxiaole/Code/yankai/projects/pythonlearn/Image-Generate-Filed/RobotInteraction/datasets/dataset/v1/robot_id/info/info,jsonl",
+      "source_sha256": "8f775225b62970fbc87bd439ae81a64c9f86ff4940ec50ac05d86d288bd32694",
+      "source_index": 0,
+      "robot_id": "robot_000001",
+      "style_group": "realistic",
+      "purpose": "robot_reference_asset_generation"
+    }
+  },
+  {
+    "id": "robot_000002",
+    "task_type": "T2I",
+    "prompt": {
+      "en": "Softbox catalog photograph of one manufactured social robot: a human-height biped with compact hips, long shins, and broad flat feet, a flattened oval head with a wide screen showing two level eye marks, and a rounded rectangular torso with a shallow inset chest plate. Exactly two articulated arms with twin-rail forearms and mechanical hands, each with three fingers and one opposable thumb; matte-black composite shells with yellow trim. Neutral idle pose, arms clear of the torso, empty hands lowered. Uncropped full-body front three-quarter view, head, both hands and feet unobscured; plain light-gray backdrop; controlled reflections on manufactured surfaces. No people, props, lettering, or logos.",
+      "zh": "一台实体社交机器人的柔光箱产品目录摄影：身高接近成年人，采用双足结构，髋部紧凑，小腿较长，脚掌宽大平坦。扁椭圆形头部配有宽屏，屏幕上显示两个水平齐平的眼睛符号，圆角矩形躯干配有略微内凹的胸板。恰好两条关节式机械臂，前臂采用双导轨结构，每只机械手有三根手指和一根可对握拇指。哑光黑色复合材料外壳，黄色饰边。机器人处于中性待机姿态，手臂与躯干保持间隔，双手空置并自然下垂。正面斜侧四分之三视角，全身完整入镜、不裁切，头部、双手和双脚无遮挡。纯浅灰色背景，制造件表面的反光柔和受控。画面中没有人物、道具、文字或标志。"
+    },
+    "negative_prompt": "",
+    "input_images": [],
+    "seed": 43,
+    "width": 1024,
+    "height": 1024,
+    "num_inference_steps": 28,
+    "evaluation_focus": [
+      "single_robot",
+      "head_torso_design",
+      "arm_and_digit_count",
+      "full_body_visibility",
+      "neutral_pose",
+      "material_and_color",
+      "style_adherence",
+      "image_quality"
+    ],
+    "extra": {
+      "source_file": "/home/xianxiaole/Code/yankai/projects/pythonlearn/Image-Generate-Filed/RobotInteraction/datasets/dataset/v1/robot_id/info/info,jsonl",
+      "source_sha256": "8f775225b62970fbc87bd439ae81a64c9f86ff4940ec50ac05d86d288bd32694",
+      "source_index": 1,
+      "robot_id": "robot_000002",
+      "style_group": "realistic",
+      "purpose": "robot_reference_asset_generation"
+    }
+  },
+  {
+    "id": "robot_000003",
+    "task_type": "T2I",
+    "prompt": {
+      "en": "High-key studio photograph of one manufactured social robot: a human-height biped with compact hips, long shins, and broad flat feet, a flattened oval head with a wide screen showing two level eye marks, and a shield-shaped torso with a raised central breastplate. Exactly two articulated arms with flat-sided forearm casings and mechanical hands, each with four fingers and one opposable thumb; terracotta composite shells with charcoal joints. Neutral idle pose, arms clear of the torso, empty hands lowered. Uncropped full-body front three-quarter view, head, both hands and feet unobscured; plain light-gray backdrop; soft shadows and preserved panel detail. No people, props, lettering, or logos.",
+      "zh": "一台实体社交机器人的高调棚拍照片：身高接近成年人，采用双足结构，髋部紧凑，小腿较长，脚掌宽大平坦。扁椭圆形头部配有宽屏，屏幕上显示两个水平齐平的眼睛符号，盾形躯干中央有一块凸起的胸甲。恰好两条关节式机械臂，前臂外壳侧面平直，每只机械手有四根手指和一根可对握拇指。陶土色复合材料外壳，炭灰色关节。机器人处于中性待机姿态，手臂与躯干保持间隔，双手空置并自然下垂。正面斜侧四分之三视角，全身完整入镜、不裁切，头部、双手和双脚无遮挡。纯浅灰色背景，阴影柔和，保留清晰的面板细节。画面中没有人物、道具、文字或标志。"
+    },
+    "negative_prompt": "",
+    "input_images": [],
+    "seed": 44,
+    "width": 1024,
+    "height": 1024,
+    "num_inference_steps": 28,
+    "evaluation_focus": [
+      "single_robot",
+      "head_torso_design",
+      "arm_and_digit_count",
+      "full_body_visibility",
+      "neutral_pose",
+      "material_and_color",
+      "style_adherence",
+      "image_quality"
+    ],
+    "extra": {
+      "source_file": "/home/xianxiaole/Code/yankai/projects/pythonlearn/Image-Generate-Filed/RobotInteraction/datasets/dataset/v1/robot_id/info/info,jsonl",
+      "source_sha256": "8f775225b62970fbc87bd439ae81a64c9f86ff4940ec50ac05d86d288bd32694",
+      "source_index": 2,
+      "robot_id": "robot_000003",
+      "style_group": "realistic",
+      "purpose": "robot_reference_asset_generation"
+    }
+  },
+  {
+    "id": "robot_000004",
+    "task_type": "T2I",
+    "prompt": {
+      "en": "Large-format commercial photograph of one manufactured social robot: a human-height biped with compact hips, long shins, and broad flat feet, a rounded box head with a flat screen showing two neutral eye dots, and a rounded rectangular torso with a shallow inset chest plate. Exactly two articulated arms with segmented upper-arm sleeves and three-jaw adaptive grippers with rounded contact pads; pale-blue polymer shells with dark-gray joints. Neutral idle pose, arms clear of the torso, empty grippers lowered. Uncropped full-body front three-quarter view, head, both grippers and feet unobscured; plain light-gray backdrop; crisp realistic surface detail. No people, props, lettering, or logos.",
+      "zh": "一台实体社交机器人的大画幅商业摄影：身高接近成年人，采用双足结构，髋部紧凑，小腿较长，脚掌宽大平坦。圆角方盒形头部配有平面屏幕，显示两个无明显情绪的眼睛圆点，圆角矩形躯干配有略微内凹的胸板。恰好两条关节式机械臂，上臂带分节护套，末端为三爪自适应夹爪，接触垫圆润。浅蓝色聚合物外壳，深灰色关节。机器人处于中性待机姿态，手臂与躯干保持间隔，双侧夹爪空置并自然下垂。正面斜侧四分之三视角，全身完整入镜、不裁切，头部、两个夹爪和双脚无遮挡。纯浅灰色背景，表面细节清晰真实。画面中没有人物、道具、文字或标志。"
+    },
+    "negative_prompt": "",
+    "input_images": [],
+    "seed": 45,
+    "width": 1024,
+    "height": 1024,
+    "num_inference_steps": 28,
+    "evaluation_focus": [
+      "single_robot",
+      "head_torso_design",
+      "arm_and_digit_count",
+      "full_body_visibility",
+      "neutral_pose",
+      "material_and_color",
+      "style_adherence",
+      "image_quality"
+    ],
+    "extra": {
+      "source_file": "/home/xianxiaole/Code/yankai/projects/pythonlearn/Image-Generate-Filed/RobotInteraction/datasets/dataset/v1/robot_id/info/info,jsonl",
+      "source_sha256": "8f775225b62970fbc87bd439ae81a64c9f86ff4940ec50ac05d86d288bd32694",
+      "source_index": 3,
+      "robot_id": "robot_000004",
+      "style_group": "realistic",
+      "purpose": "robot_reference_asset_generation"
+    }
+  },
+  {
+    "id": "robot_000005",
+    "task_type": "T2I",
+    "prompt": {
+      "en": "Retro anime illustration of one social robot: a human-height biped with compact hips, long shins, and broad flat feet, a capsule-shaped head with a curved screen showing two neutral eye dots, and a tapered torso with a vertical central chest seam. Exactly two articulated arms with rounded forearm shells and three-jaw adaptive grippers with rounded contact pads; brushed-steel shells with dark-red joint covers. Neutral idle pose, arms clear of the torso, empty grippers lowered. Uncropped full-body front three-quarter view, head, both grippers and feet unobscured; plain light-gray backdrop; restrained colors and crisp hand-drawn mechanical contours. No people, props, lettering, or logos.",
+      "zh": "一台社交机器人的复古动漫插画：身高接近成年人，采用双足结构，髋部紧凑，小腿较长，脚掌宽大平坦。胶囊形头部配有曲面屏幕，显示两个无明显情绪的眼睛圆点，渐窄的躯干在胸部中央有一条竖直接缝。恰好两条关节式机械臂，前臂外壳圆润，末端为三爪自适应夹爪，接触垫圆润。拉丝钢外壳，深红色关节护罩。机器人处于中性待机姿态，手臂与躯干保持间隔，双侧夹爪空置并自然下垂。正面斜侧四分之三视角，全身完整入镜、不裁切，头部、两个夹爪和双脚无遮挡。纯浅灰色背景，配色克制，机械轮廓采用清晰的手绘线条。画面中没有人物、道具、文字或标志。"
+    },
+    "negative_prompt": "",
+    "input_images": [],
+    "seed": 46,
+    "width": 1024,
+    "height": 1024,
+    "num_inference_steps": 28,
+    "evaluation_focus": [
+      "single_robot",
+      "head_torso_design",
+      "arm_and_digit_count",
+      "full_body_visibility",
+      "neutral_pose",
+      "material_and_color",
+      "style_adherence",
+      "image_quality"
+    ],
+    "extra": {
+      "source_file": "/home/xianxiaole/Code/yankai/projects/pythonlearn/Image-Generate-Filed/RobotInteraction/datasets/dataset/v1/robot_id/info/info,jsonl",
+      "source_sha256": "8f775225b62970fbc87bd439ae81a64c9f86ff4940ec50ac05d86d288bd32694",
+      "source_index": 4,
+      "robot_id": "robot_000005",
+      "style_group": "nonrealistic",
+      "purpose": "robot_reference_asset_generation"
+    }
+  },
+  {
+    "id": "robot_000006",
+    "task_type": "T2I",
+    "prompt": {
+      "en": "Industrial-design editorial photograph of one manufactured social robot: a human-height biped with compact hips, long shins, and broad flat feet, a flattened oval head with a wide screen showing two level eye marks, and a rounded rectangular torso with a shallow inset chest plate. Exactly two articulated arms with recessed elbow pivots and mechanical hands, each with two fingers and one opposable thumb; cream polymer shells with muted-green joints. Neutral idle pose, arms clear of the torso, empty hands lowered. Uncropped full-body front three-quarter view, head, both hands and feet unobscured; plain light-gray backdrop; balanced side lighting. No people, props, lettering, or logos.",
+      "zh": "一台实体社交机器人的工业设计杂志摄影：身高接近成年人，采用双足结构，髋部紧凑，小腿较长，脚掌宽大平坦。扁椭圆形头部配有宽屏，屏幕上显示两个水平齐平的眼睛符号，圆角矩形躯干配有略微内凹的胸板。恰好两条关节式机械臂，肘部转轴内嵌，每只机械手有两根手指和一根可对握拇指。奶油色聚合物外壳，柔和的绿色关节。机器人处于中性待机姿态，手臂与躯干保持间隔，双手空置并自然下垂。正面斜侧四分之三视角，全身完整入镜、不裁切，头部、双手和双脚无遮挡。纯浅灰色背景，采用明暗均衡的侧向照明。画面中没有人物、道具、文字或标志。"
+    },
+    "negative_prompt": "",
+    "input_images": [],
+    "seed": 47,
+    "width": 1024,
+    "height": 1024,
+    "num_inference_steps": 28,
+    "evaluation_focus": [
+      "single_robot",
+      "head_torso_design",
+      "arm_and_digit_count",
+      "full_body_visibility",
+      "neutral_pose",
+      "material_and_color",
+      "style_adherence",
+      "image_quality"
+    ],
+    "extra": {
+      "source_file": "/home/xianxiaole/Code/yankai/projects/pythonlearn/Image-Generate-Filed/RobotInteraction/datasets/dataset/v1/robot_id/info/info,jsonl",
+      "source_sha256": "8f775225b62970fbc87bd439ae81a64c9f86ff4940ec50ac05d86d288bd32694",
+      "source_index": 5,
+      "robot_id": "robot_000006",
+      "style_group": "realistic",
+      "purpose": "robot_reference_asset_generation"
+    }
+  },
+  {
+    "id": "robot_000007",
+    "task_type": "T2I",
+    "prompt": {
+      "en": "Fine-grain film photograph of one manufactured social robot: a human-height biped with compact hips, long shins, and broad flat feet, a domed head with a wraparound sensor band, and a rounded rectangular torso with a shallow inset chest plate. Exactly two articulated arms with oval wrist cuffs and mechanical hands, each with two fingers and one opposable thumb; charcoal alloy shells with copper trim. Neutral idle pose, arms clear of the torso, empty hands lowered. Uncropped full-body front three-quarter view, head, both hands and feet unobscured; plain light-gray backdrop; subtle grain and natural colors. No people, props, lettering, or logos.",
+      "zh": "一台实体社交机器人的细颗粒胶片摄影：身高接近成年人，采用双足结构，髋部紧凑，小腿较长，脚掌宽大平坦。穹顶形头部带有环绕式传感器带，圆角矩形躯干配有略微内凹的胸板。恰好两条关节式机械臂，腕部带椭圆形护圈，每只机械手有两根手指和一根可对握拇指。炭灰色合金外壳，铜色饰边。机器人处于中性待机姿态，手臂与躯干保持间隔，双手空置并自然下垂。正面斜侧四分之三视角，全身完整入镜、不裁切，头部、双手和双脚无遮挡。纯浅灰色背景，具有轻微胶片颗粒和自然色彩。画面中没有人物、道具、文字或标志。"
+    },
+    "negative_prompt": "",
+    "input_images": [],
+    "seed": 48,
+    "width": 1024,
+    "height": 1024,
+    "num_inference_steps": 28,
+    "evaluation_focus": [
+      "single_robot",
+      "head_torso_design",
+      "arm_and_digit_count",
+      "full_body_visibility",
+      "neutral_pose",
+      "material_and_color",
+      "style_adherence",
+      "image_quality"
+    ],
+    "extra": {
+      "source_file": "/home/xianxiaole/Code/yankai/projects/pythonlearn/Image-Generate-Filed/RobotInteraction/datasets/dataset/v1/robot_id/info/info,jsonl",
+      "source_sha256": "8f775225b62970fbc87bd439ae81a64c9f86ff4940ec50ac05d86d288bd32694",
+      "source_index": 6,
+      "robot_id": "robot_000007",
+      "style_group": "realistic",
+      "purpose": "robot_reference_asset_generation"
+    }
+  },
+  {
+    "id": "robot_000008",
+    "task_type": "T2I",
+    "prompt": {
+      "en": "Comic-book illustration of one social robot: a human-height biped with compact hips, long shins, and broad flat feet, a capsule-shaped head with a curved screen showing two neutral eye dots, and a tapered torso with a vertical central chest seam. Exactly two articulated arms with segmented upper-arm sleeves and mechanical hands, each with four fingers and one opposable thumb; sage-green composite shells with cream trim. Neutral idle pose, arms clear of the torso, empty hands lowered. Uncropped full-body front three-quarter view, head, both hands and feet unobscured; plain light-gray backdrop; clean ink outlines and readable shaded panels. No people, props, lettering, or logos.",
+      "zh": "一台社交机器人的漫画插画：身高接近成年人，采用双足结构，髋部紧凑，小腿较长，脚掌宽大平坦。胶囊形头部配有曲面屏幕，显示两个无明显情绪的眼睛圆点，渐窄的躯干在胸部中央有一条竖直接缝。恰好两条关节式机械臂，上臂带分节护套，每只机械手有四根手指和一根可对握拇指。鼠尾草绿色复合材料外壳，奶油色饰边。机器人处于中性待机姿态，手臂与躯干保持间隔，双手空置并自然下垂。正面斜侧四分之三视角，全身完整入镜、不裁切，头部、双手和双脚无遮挡。纯浅灰色背景，采用干净的墨线轮廓，面板上的明暗层次清晰。画面中没有人物、道具、文字或标志。"
+    },
+    "negative_prompt": "",
+    "input_images": [],
+    "seed": 49,
+    "width": 1024,
+    "height": 1024,
+    "num_inference_steps": 28,
+    "evaluation_focus": [
+      "single_robot",
+      "head_torso_design",
+      "arm_and_digit_count",
+      "full_body_visibility",
+      "neutral_pose",
+      "material_and_color",
+      "style_adherence",
+      "image_quality"
+    ],
+    "extra": {
+      "source_file": "/home/xianxiaole/Code/yankai/projects/pythonlearn/Image-Generate-Filed/RobotInteraction/datasets/dataset/v1/robot_id/info/info,jsonl",
+      "source_sha256": "8f775225b62970fbc87bd439ae81a64c9f86ff4940ec50ac05d86d288bd32694",
+      "source_index": 7,
+      "robot_id": "robot_000008",
+      "style_group": "nonrealistic",
+      "purpose": "robot_reference_asset_generation"
+    }
+  },
+  {
+    "id": "robot_000009",
+    "task_type": "T2I",
+    "prompt": {
+      "en": "Daylight product photograph of one manufactured social robot: a human-height biped with compact hips, long shins, and broad flat feet, a rounded triangular head with two small optical discs, and a barrel-shaped torso with a recessed oval chest panel. Exactly two articulated arms with flexible elbow bellows and mechanical hands, each with two fingers and one opposable thumb; pale-lavender polymer shells with steel-gray trim. Neutral idle pose, arms clear of the torso, empty hands lowered. Uncropped full-body front three-quarter view, head, both hands and feet unobscured; plain light-gray backdrop; diffuse natural light. No people, props, lettering, or logos.",
+      "zh": "一台实体社交机器人的自然日光产品摄影：身高接近成年人，采用双足结构，髋部紧凑，小腿较长，脚掌宽大平坦。圆角三角形头部配有两个小型圆盘状光学部件，桶形躯干配有内凹的椭圆形胸部面板。恰好两条关节式机械臂，肘部带柔性波纹护套，每只机械手有两根手指和一根可对握拇指。淡薰衣草紫色聚合物外壳，钢灰色饰边。机器人处于中性待机姿态，手臂与躯干保持间隔，双手空置并自然下垂。正面斜侧四分之三视角，全身完整入镜、不裁切，头部、双手和双脚无遮挡。纯浅灰色背景，采用柔和的漫射自然光。画面中没有人物、道具、文字或标志。"
+    },
+    "negative_prompt": "",
+    "input_images": [],
+    "seed": 50,
+    "width": 1024,
+    "height": 1024,
+    "num_inference_steps": 28,
+    "evaluation_focus": [
+      "single_robot",
+      "head_torso_design",
+      "arm_and_digit_count",
+      "full_body_visibility",
+      "neutral_pose",
+      "material_and_color",
+      "style_adherence",
+      "image_quality"
+    ],
+    "extra": {
+      "source_file": "/home/xianxiaole/Code/yankai/projects/pythonlearn/Image-Generate-Filed/RobotInteraction/datasets/dataset/v1/robot_id/info/info,jsonl",
+      "source_sha256": "8f775225b62970fbc87bd439ae81a64c9f86ff4940ec50ac05d86d288bd32694",
+      "source_index": 8,
+      "robot_id": "robot_000009",
+      "style_group": "realistic",
+      "purpose": "robot_reference_asset_generation"
+    }
+  },
+  {
+    "id": "robot_000010",
+    "task_type": "T2I",
+    "prompt": {
+      "en": "Fine-grain film photograph of one manufactured social robot: a human-height biped with compact hips, long shins, and broad flat feet, a hexagonal head with one central camera lens, and a tapered torso with a vertical central chest seam. Exactly two articulated arms with oval wrist cuffs and mechanical hands, each with two fingers and one opposable thumb; light-gray polymer shells with violet trim. Neutral idle pose, arms clear of the torso, empty hands lowered. Uncropped full-body front three-quarter view, head, both hands and feet unobscured; plain light-gray backdrop; subtle grain and natural colors. No people, props, lettering, or logos.",
+      "zh": "一台实体社交机器人的细颗粒胶片摄影：身高接近成年人，采用双足结构，髋部紧凑，小腿较长，脚掌宽大平坦。六边形头部中央有一枚摄像头镜头，渐窄的躯干在胸部中央有一条竖直接缝。恰好两条关节式机械臂，腕部带椭圆形护圈，每只机械手有两根手指和一根可对握拇指。浅灰色聚合物外壳，紫罗兰色饰边。机器人处于中性待机姿态，手臂与躯干保持间隔，双手空置并自然下垂。正面斜侧四分之三视角，全身完整入镜、不裁切，头部、双手和双脚无遮挡。纯浅灰色背景，具有轻微胶片颗粒和自然色彩。画面中没有人物、道具、文字或标志。"
+    },
+    "negative_prompt": "",
+    "input_images": [],
+    "seed": 51,
+    "width": 1024,
+    "height": 1024,
+    "num_inference_steps": 28,
+    "evaluation_focus": [
+      "single_robot",
+      "head_torso_design",
+      "arm_and_digit_count",
+      "full_body_visibility",
+      "neutral_pose",
+      "material_and_color",
+      "style_adherence",
+      "image_quality"
+    ],
+    "extra": {
+      "source_file": "/home/xianxiaole/Code/yankai/projects/pythonlearn/Image-Generate-Filed/RobotInteraction/datasets/dataset/v1/robot_id/info/info,jsonl",
+      "source_sha256": "8f775225b62970fbc87bd439ae81a64c9f86ff4940ec50ac05d86d288bd32694",
+      "source_index": 9,
+      "robot_id": "robot_000010",
+      "style_group": "realistic",
+      "purpose": "robot_reference_asset_generation"
+    }
+  }
+]

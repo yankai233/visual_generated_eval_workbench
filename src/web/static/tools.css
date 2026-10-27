@@ -1,0 +1,48 @@
+.tools-header { max-width: 1540px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 28px 30px; }
+.tools-header h1 { font-size: 30px; }
+.tools-header nav { display: flex; gap: 10px; }
+.tools-header a, .tool-actions a { text-decoration: none; }
+.tools-main { max-width: 1540px; padding: 0 30px 40px; }
+.tool-tabs { display: flex; gap: 5px; margin-bottom: 15px; }
+.tool-tabs button { border: 0; background: transparent; color: var(--muted); border-radius: 10px; padding: 11px 22px; font-weight: 700; }
+.tool-tabs button[aria-selected=true] { background: #e1f0e7; color: var(--green); }
+.tool-panel { padding: 22px; }
+.tool-toolbar, .tool-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.tool-toolbar { margin-bottom: 18px; }
+.tool-toolbar .field { margin: 0; width: 190px; }
+.tool-toolbar #swapLanguagesBtn { align-self: flex-end; }
+.tool-status { color: var(--muted); font-size: 12px; }
+#translationMode, #translationCount { margin-left: auto; }
+.translation-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
+.translation-grid.api-mode { grid-template-columns: 1fr 1fr; }
+.translation-grid textarea { min-height: 280px; line-height: 1.7; }
+.tool-actions a[aria-disabled=true] { opacity: .48; cursor: not-allowed; }
+.tool-actions a:not([aria-disabled=true]):hover { border-color: #78b596; }
+.markdown-toolbar select { width: min(360px, 100%); }
+.markdown-save-toolbar input { flex: 1; max-width: 360px; min-width: 150px; }
+.markdown-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; }
+.markdown-grid > .field { min-width: 0; margin-bottom: 0; }
+#markdownEditor, #markdownPreview { width: 100%; height: min(65vh, 750px); min-height: 340px; border: 1px solid var(--line); border-radius: 11px; background: white; }
+#markdownEditor { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 13px; line-height: 1.7; resize: none; tab-size: 2; }
+.embedded-tools, .embedded-tools body { height: 100%; min-height: 0; overflow: hidden; }
+.embedded-tools body { background: #f8faf9; }
+.embedded-tools .tools-header { display: none; }
+.embedded-tools .tools-main { width: 100%; max-width: none; height: 100%; min-height: 0; padding: 14px; display: flex; flex-direction: column; overflow: hidden; }
+.embedded-tools .tool-tabs { position: sticky; z-index: 2; top: 0; margin: -14px -14px 10px; padding: 8px 14px; border-bottom: 1px solid var(--line); background: rgba(248,250,249,.96); }
+.embedded-tools .tool-tabs button { padding: 8px 17px; }
+.embedded-tools .tool-panel { flex: 1 1 auto; min-height: 0; padding: 15px; border-radius: 15px; box-shadow: none; backdrop-filter: none; overflow: auto; }
+.embedded-tools .tool-toolbar { margin-bottom: 12px; }
+.embedded-tools .translation-grid textarea { min-height: 180px; }
+.embedded-tools #markdownEditor, .embedded-tools #markdownPreview { height: calc(100vh - 190px); min-height: 240px; }
+@media (max-width: 760px) {
+  .tools-header { padding: 20px 16px; align-items: flex-start; }
+  .tools-header h1 { font-size: 24px; white-space: nowrap; }
+  .tools-header nav { flex-wrap: wrap; justify-content: flex-end; }
+  .tools-main { padding: 0 12px 25px; }
+  .tool-panel { padding: 15px; }
+  .tool-toolbar .field { width: min(150px, 39%); }
+  .translation-grid.api-mode, .markdown-grid { grid-template-columns: 1fr; }
+  #translationMode { width: 100%; }
+  .translation-grid textarea { min-height: 220px; }
+  #markdownEditor, #markdownPreview { height: 380px; }
+}

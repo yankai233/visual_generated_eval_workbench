@@ -1,0 +1,15 @@
+{
+  "id": 2,
+  "task_type": "t2i",
+  "prompt": {
+    "zh": "这是一幅高质量的3D动画场景：在外星球上，一只戴着透明头盔的橙色小狐狸宇航员，正站在一个蓝色小机器人身旁。小狐狸左爪拿着一颗闪烁着紫光的晶体，而机器人则投射出一幅全息星图。天空中悬挂着两颗卫星，地面上环绕着会发光的植物。角色神态生动，材质质感细腻，运用了电影级的轮廓光效果，呈现出一种老少皆宜的动画风格。",
+    "en": "A high-quality 3D animated scene featuring a small orange fox astronaut with a transparent helmet, standing beside a tiny blue robot on an alien planet. The fox holds a glowing purple crystal in its left paw, while the robot projects a holographic star map. Two moons appear in the sky, bioluminescent plants surround their feet. Expressive characters, polished materials, cinematic rim lighting, appealing family-animation style."
+  },
+  "evaluation_focus": [
+    "3d_character_rendering",
+    "left_right_instruction_following",
+    "object_counting",
+    "emissive_materials",
+    "narrative_coherence"
+  ]
+}

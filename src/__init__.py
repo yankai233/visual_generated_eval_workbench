@@ -1,0 +1,2 @@
+"""Visual generation evaluation workbench."""
+

@@ -1,0 +1,21 @@
+# UNO 使用独立 Conda 环境运行，避免影响工作台已有的 Diffusers 依赖。
+external_python: /home/xianxiaole/miniconda3/envs/uno/bin/python
+repo_path: /home/xianxiaole/Code/xlq/UNO-main
+
+# 下面均为已下载的本地权重，不会从网络重复下载。
+flux_checkpoint: /home/xianxiaole/.cache/huggingface/hub/models--black-forest-labs--FLUX.1-dev/snapshots/0ef5fff789c832c5c7f4e127f94c8b54bbcced44/flux1-dev.safetensors
+ae_checkpoint: /home/xianxiaole/Code/xlq/UNO-main/ae/models--black-forest-labs--FLUX.1-dev/snapshots/0ef5fff789c832c5c7f4e127f94c8b54bbcced44/ae.safetensors
+lora_checkpoint: /home/xianxiaole/.cache/huggingface/hub/models--bytedance-research--UNO/snapshots/d19ff946960105886061ea7d35174b4abc098e1f/dit_lora.safetensors
+t5_path: /home/xianxiaole/Code/xlq/UNO-main/xflux_text_encoders
+clip_path: /home/xianxiaole/Code/xlq/UNO-main/clip-vit-large-patch14
+
+model_type: flux-dev
+only_lora: true
+lora_rank: 512
+cpu_offload: true
+guidance_scale: 4.0
+pe: d
+single_ref_size: 512
+multi_ref_size: 320
+startup_timeout: 900
+generation_timeout: 3600

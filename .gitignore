@@ -1,0 +1,35 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.idea/
+.vscode/
+*.egg-info/
+build/
+dist/
+# Runtime outputs (keep directory placeholders only).
+output/*
+!output/gen/
+!output/matrix/
+output/gen/*
+!output/gen/.gitkeep
+output/matrix/*
+!output/matrix/.gitkeep
+output/.uploads/
+output/tools/
+configs/.pipeline-editor-token
+
+# Logs, local credentials, and model weights.
+logs/
+*.log
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+.DS_Store
+

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>结果对比</title>
+    <link rel="stylesheet" href="/static/styles.css?v=20261019-6" />
+    <link rel="stylesheet" href="/static/compare.css?v=4" />
+    <link rel="stylesheet" href="/static/auxiliary-window.css?v=3" />
+  </head>
+  <body>
+    <header class="compare-header"><h1>结果对比</h1><nav class="compare-toolbar"><button class="secondary-button" type="button" data-auxiliary-trigger>辅助工具</button><a class="secondary-button" href="/outpainting-compare">扩图对比</a><a class="secondary-button" href="/">返回工作台</a></nav></header>
+    <main class="compare-main">
+      <section class="panel compare-controls">
+        <div class="compare-toolbar">
+          <label class="field"><span>数据来源</span><select id="sourceSelect" aria-label="数据来源"></select></label>
+          <button id="samplesBtn" class="secondary-button">选择样本</button>
+          <button id="groupsBtn" class="secondary-button" title="将自定义结果手动对齐为同一样本">自定义分组</button>
+          <button id="addMethodBtn" class="secondary-button">＋ 方法</button>
+          <button id="refreshBtn" class="secondary-button">刷新</button>
+        </div>
+        <div id="methodColumns" class="method-columns"></div>
+        <div class="compare-toolbar view-toolbar">
+          <input id="queryInput" type="search" placeholder="样本 ID / Prompt" aria-label="搜索样本" />
+          <label class="check-label"><input id="onlyCommonInput" type="checkbox" />仅共同样本</label>
+          <select id="pageSizeSelect" aria-label="每页样本数"><option value="10">10 / 页</option><option value="20" selected>20 / 页</option><option value="50">50 / 页</option></select>
+          <span id="rowCount" aria-live="polite"></span>
+        </div>
+      </section>
+      <p id="compareError" class="inline-error hidden" role="alert"></p>
+      <section id="matrixViewport" class="matrix-viewport panel" aria-label="结果对比表"><div class="compare-empty">加载中…</div></section>
+      <nav class="compare-pagination"><button id="prevPageBtn" class="secondary-button">上一页</button><span id="pageLabel">1 / 1</span><button id="nextPageBtn" class="secondary-button">下一页</button></nav>
+    </main>
+    <dialog id="samplesDialog" class="yaml-dialog">
+      <form method="dialog" class="dialog-card">
+        <div class="section-heading"><h2>选择样本</h2><button class="icon-button" value="cancel" aria-label="关闭">×</button></div>
+        <input id="sampleFilter" type="search" placeholder="样本 ID / Prompt" aria-label="筛选样本" />
+        <div class="compare-toolbar"><button id="allSamplesBtn" type="button" class="text-button">全选</button><button id="noSamplesBtn" type="button" class="text-button">清空</button><span id="sampleSelectionCount"></span></div>
+        <div id="sampleChoices" class="compare-choices"></div>
+        <div class="dialog-actions"><button class="secondary-button" value="cancel">取消</button><button id="applySamplesBtn" type="button" class="primary-button compact">应用</button></div>
+      </form>
+    </dialog>
+    <dialog id="groupsDialog" class="yaml-dialog">
+      <form method="dialog" class="dialog-card">
+        <div class="section-heading"><h2>自定义分组</h2><button class="icon-button" value="cancel" aria-label="关闭">×</button></div>
+        <label class="field"><span>分组名称</span><input id="groupNameInput" placeholder="同一分组显示在同一行" maxlength="120" /></label>
+        <input id="groupFilter" type="search" placeholder="Pipeline / Prompt / 分组" aria-label="筛选生成结果" />
+        <div id="groupChoices" class="compare-choices"></div>
+        <p id="groupError" class="inline-error" role="alert"></p>
+        <div class="dialog-actions"><button id="resetGroupsBtn" type="button" class="secondary-button">恢复自动分组</button><button id="applyGroupsBtn" type="button" class="primary-button compact">保存分组</button></div>
+      </form>
+    </dialog>
+    <dialog id="imageDialog" class="image-dialog"><button id="closeImageBtn" class="image-close" aria-label="关闭">×</button><img id="largeImage" alt="图像预览" /></dialog>
+    <script type="module" src="/static/compare.js?v=7"></script>
+  </body>
+</html>

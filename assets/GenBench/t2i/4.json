@@ -1,0 +1,15 @@
+{
+  "id": 4,
+  "task_type": "t2i",
+  "prompt": {
+    "zh": "高端商业产品摄影：一只透明的长方形香水瓶，瓶内盛有半瓶琥珀色液体，配有拉丝银色瓶盖，瓶身正面饰有一个精致的浮雕金色徽标。香水瓶置于光亮的黑色石质台面上，台面留有细微的水滴痕迹。强烈的逆光效果呈现出逼真的玻璃折射、焦散现象及内部反射。背景呈深炭灰色，构图几何结构严谨，尽显奢华广告美学；画面中仅此一只香水瓶，无其他瓶身。",
+    "en": "Premium commercial product photography of a transparent rectangular perfume bottle filled halfway with amber liquid, a brushed silver cap, and a small embossed gold emblem on the front. The bottle stands on a glossy black stone surface with a subtle water droplet trail. Strong backlighting reveals realistic glass refraction, caustics and internal reflections. Deep charcoal background, precise geometry, luxury advertising aesthetic, no extra bottles."
+  },
+  "evaluation_focus": [
+    "product_photography",
+    "transparent_materials",
+    "physical_light_transport",
+    "precise_geometry",
+    "single_object_constraint"
+  ]
+}

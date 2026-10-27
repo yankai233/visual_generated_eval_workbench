@@ -1,0 +1,35 @@
+{
+  "id": 13,
+  "task_type": "multi_reference",
+  "reference_images": [
+    {
+      "file": "reference_1.png",
+      "role": "croissant_shape_and_texture",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Ham_and_cheese_croissant_-_Massachusetts.jpg",
+      "license": "CC0"
+    },
+    {
+      "file": "reference_2.png",
+      "role": "coffee_cup_shape_and_coffee_surface",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Cup_of_coffee_(Serbian_cuisine,_Grand_kava).jpg",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "file": "reference_3.png",
+      "role": "strawberry_color_and_surface_texture",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Garden_strawberry_(Fragaria_×_ananassa)_single2.jpg",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "prompt": {
+    "zh": "创作一张俯拍的商业早餐静物照片，将三张参考图中的元素组合在同一个暖色胡桃木桌面上：参考图1中的同款可颂放在左下方的白色小盘中，参考图2中的同款咖啡杯放在右上方，五颗具有参考图3相同红色、籽粒和表面质感的草莓排列在两者之间，形成清晰的三角构图。保持食物和器皿的形状、材质与尺度可信，光线从左上方柔和照入，阴影方向一致。画面必须恰好包含一个可颂、一杯咖啡和五颗草莓，不得出现其他食物、餐具、文字或品牌标识。",
+    "en": "Create a top-down commercial breakfast still life that combines the elements from all three references on one warm walnut tabletop. Place the same type of croissant from reference 1 on a small white plate in the lower left, the same coffee cup from reference 2 in the upper right, and arrange five strawberries matching the red color, seeds and surface texture of reference 3 between them to form a clear triangular composition. Preserve credible shape, material and scale, with soft light from the upper left and consistent shadow direction. The image must contain exactly one croissant, one cup of coffee and five strawberries, with no other food, utensils, text or branding."
+  },
+  "evaluation_focus": [
+    "three_reference_fusion",
+    "exact_object_counting",
+    "attribute_binding",
+    "top_down_composition",
+    "lighting_consistency"
+  ]
+}

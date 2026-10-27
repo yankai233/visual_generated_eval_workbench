@@ -1,0 +1,15 @@
+{
+  "id": 1,
+  "task_type": "t2i",
+  "prompt": {
+    "zh": "东京夜间一场大雨过后的街景，呈现出电影质感的写实风格。三名行人撑着透明雨伞，一辆红色出租车从他们身后驶过；霓虹灯光映照在湿漉漉的路面上，一只橘色小猫正蹲坐在自动售货机下方。采用35毫米镜头低角度拍摄，光影反射逼真，人物生理结构自然，雨滴细节丰富，构图均衡，画面中无重复出现的人物或物体。",
+    "en": "A photorealistic cinematic street scene in Tokyo at night after heavy rain. Three pedestrians hold transparent umbrellas, a red taxi passes behind them, neon signs reflect on the wet pavement, and a small orange cat sits under a vending machine. Low-angle 35mm photography, realistic reflections, natural human anatomy, detailed raindrops, balanced composition, no duplicated people or objects."
+  },
+  "evaluation_focus": [
+    "complex_scene_composition",
+    "object_counting",
+    "spatial_relationships",
+    "photorealism",
+    "human_anatomy"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": 8,
+  "task_type": "ti2i",
+  "reference_image": "reference.png",
+  "source": {
+    "description": "Beautiful shot of Banff National Park",
+    "url": "https://images.openai.com/static-rsc-4/BamThwtYFeVnHQ6SJrxjfODTqyN2VLBvEfa5g2ZzlhVR3DynLPQWV8s-mlFv4iWvjI4zWLEjkrHYMv__P14ILudFlrBxhscLa9LwGKxRR4Su3uscXG3GaPcF2pYUakgExtMk-tzNzsh6J55O4Fyi7vlzyuc-x_ebin7bQJaxHkqVFQzeP1080qmZmjgwb4Q4?purpose=fullsize"
+  },
+  "prompt": {
+    "zh": "将图像扩展至 16:9 的横向画布。保留原图中所有的原始像素。向左右两侧自然延伸湖泊，保持透视一致并延续山脊线，同时沿湖岸延伸森林。确保天气、大气雾霾、光影和色彩基调与原图保持一致。避免出现重复的山峰、突兀的边界、雷同的树木以及人工拼接痕迹。",
+    "en": "Expand the image to a 16:9 landscape canvas. Preserve every original pixel in the source image region. Extend the lake naturally toward the left and right, continue the mountain ridgelines with consistent perspective, and extend the forest along the shoreline. Match the original weather, atmospheric haze, lighting and color grading. Avoid duplicated mountain peaks, abrupt boundaries, repeated trees and artificial seams."
+  },
+  "evaluation_focus": [
+    "outpainting",
+    "source_pixel_preservation",
+    "perspective_continuity",
+    "seam_removal",
+    "landscape_coherence"
+  ]
+}

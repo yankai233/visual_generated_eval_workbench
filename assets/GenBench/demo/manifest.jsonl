@@ -1,0 +1,4 @@
+{"id":"demo-001","task_type":"T2I","prompt":"A glass greenhouse in a quiet forest at sunrise","negative_prompt":"low quality","seed":101,"width":768,"height":768,"num_inference_steps":20}
+{"id":"demo-002","task_type":"T2I","prompt":"A small red robot reading a book beside a window","negative_prompt":"blurry","seed":102,"width":768,"height":768,"num_inference_steps":24}
+{"id":"demo-003","task_type":"T2I","prompt":"Minimal product photo of a ceramic teapot on linen","negative_prompt":"text, watermark","seed":103,"width":768,"height":768,"num_inference_steps":18}
+

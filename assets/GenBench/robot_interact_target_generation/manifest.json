@@ -1,0 +1,158 @@
+{
+  "name": "RobotInteract Target Generation",
+  "description": "Controlled multi-reference cases for selecting a teacher model to synthesize affective human-robot interaction target images.",
+  "samples": [
+    {
+      "id": "ri-001-happy-high-five-a",
+      "task_type": "MultiReference",
+      "prompt": {
+        "zh": "生成一张写实全身摄影图。第一张参考图（ref_image_0）中的成年女性站在左侧，第二张参考图（ref_image_1）中的白橙色双足人形机器人站在右侧；严格保持女性的身份、蓝色夹克、白色上衣和深灰色长裤，并保持机器人的白橙配色、黑色面屏、两个青色圆形眼睛、头部、躯干、两条机械臂、双手和双腿结构。两者在明亮的现代社区中心面对面愉快地击掌，女性的右手掌与机器人的左手掌在肩膀上方清晰接触。女性露出明显真诚的微笑，眼角上扬，身体自然前倾，空闲手臂呈开放姿态；机器人抬头面向女性，姿态活跃友好。画面中仅有一名人物和一个机器人，双方完整可见，接触点清楚，比例自然，光照真实，无文字和水印。",
+        "en": "Create a photorealistic full-body photograph. The adult woman from the first reference image (ref_image_0) stands on the left, and the white-and-orange biped humanoid robot from the second reference image (ref_image_1) stands on the right. Strictly preserve the woman's identity, blue jacket, white shirt and charcoal trousers, and preserve the robot's white-orange colors, black face panel, two cyan circular eyes, head, torso, exactly two mechanical arms, two hands and two legs. They face each other and perform a joyful high-five in a bright modern community center, with the woman's right palm clearly touching the robot's left palm above shoulder height. The woman has a clear genuine smile, raised eye corners, a naturally forward-leaning body and an open free arm; the robot looks toward her with an energetic friendly posture. Show exactly one human and one robot, both fully visible, with a clear contact point, natural proportions, realistic lighting, no text and no watermark."
+      },
+      "negative_prompt": "extra people, extra robot, duplicate subject, extra limbs, missing limbs, fused hands, deformed fingers, broken robot joints, changed clothing, changed robot design, text, logo, watermark, cropped feet",
+      "reference_images": [
+        {"file": "human_a_blue_jacket.png", "role": "human_identity_and_clothing"},
+        {"file": "robot_a_white_orange_biped.png", "role": "robot_identity_and_structure"}
+      ],
+      "seed": 24001,
+      "width": 1024,
+      "height": 1024,
+      "num_inference_steps": 28,
+      "evaluation_focus": ["human_identity", "robot_identity", "robot_structure", "high_five_contact", "happy_face", "happy_body_language", "subject_count"],
+      "extra": {"relation": "high_five", "prompt_emotion": "happy", "difficulty": "easy", "pair_id": "emotion-contrast-high-five-a", "human_ref": "human_a", "robot_ref": "robot_a"}
+    },
+    {
+      "id": "ri-002-surprised-high-five-a",
+      "task_type": "MultiReference",
+      "prompt": {
+        "zh": "生成一张写实全身摄影图。第一张参考图（ref_image_0）中的成年女性站在左侧，第二张参考图（ref_image_1）中的白橙色双足人形机器人站在右侧；严格保持女性的身份和服装，并保持机器人的白橙配色、黑色面屏、两个青色圆形眼睛以及完整的头部、躯干、两臂、双手和双腿结构。两者在明亮的现代社区中心面对面击掌，女性的右手掌与机器人的左手掌在肩膀上方清晰接触。女性呈现明显的惊讶情绪：双眼睁大、眉毛抬起、嘴巴微张、躯干轻微后仰，空闲的左手抬起；机器人头部略微后仰，空闲手臂张开，表现突然和意外。保持击掌关系不变。画面中仅有一名人物和一个机器人，双方完整可见，接触点清楚，比例自然，光照真实，无文字和水印。",
+        "en": "Create a photorealistic full-body photograph. The adult woman from the first reference image (ref_image_0) stands on the left, and the white-and-orange biped humanoid robot from the second reference image (ref_image_1) stands on the right. Strictly preserve the woman's identity and clothing, and preserve the robot's white-orange colors, black face panel, two cyan circular eyes and complete head, torso, two-arm, two-hand and two-leg structure. They face each other and perform a high-five in the same kind of bright modern community center, with the woman's right palm clearly touching the robot's left palm above shoulder height. The woman shows unmistakable surprise: wide-open eyes, raised eyebrows, slightly open mouth, a mildly backward-leaning torso and her free left hand raised. The robot tilts its head slightly backward and opens its free arm to convey a sudden unexpected moment. Keep the high-five relation unchanged. Show exactly one human and one robot, both fully visible, with a clear contact point, natural proportions, realistic lighting, no text and no watermark."
+      },
+      "negative_prompt": "smiling happy expression, extra people, extra robot, duplicate subject, extra limbs, missing limbs, fused hands, deformed fingers, broken robot joints, changed clothing, changed robot design, text, logo, watermark, cropped feet",
+      "reference_images": [
+        {"file": "human_a_blue_jacket.png", "role": "human_identity_and_clothing"},
+        {"file": "robot_a_white_orange_biped.png", "role": "robot_identity_and_structure"}
+      ],
+      "seed": 24002,
+      "width": 1024,
+      "height": 1024,
+      "num_inference_steps": 28,
+      "evaluation_focus": ["human_identity", "robot_identity", "robot_structure", "high_five_contact", "surprised_face", "surprised_body_language", "emotion_contrast"],
+      "extra": {"relation": "high_five", "prompt_emotion": "surprised", "difficulty": "medium", "pair_id": "emotion-contrast-high-five-a", "human_ref": "human_a", "robot_ref": "robot_a"}
+    },
+    {
+      "id": "ri-003-sad-shoulder-touch-a",
+      "task_type": "MultiReference",
+      "prompt": {
+        "zh": "生成一张写实全身摄影图。第一张参考图（ref_image_0）中的成年女性站在左侧，第二张参考图（ref_image_1）中的白橙色双足人形机器人站在右侧；保持人物身份、蓝色夹克和完整机器人设计。场景是安静的诊所等候区。机器人面向女性，将左手轻柔且清晰地放在女性右肩上，右臂自然下垂；女性低头，眼神下垂，内眉轻抬，嘴角下弯，双肩下沉，身体略微蜷缩，表现明确的悲伤。机器人略微低头并保持克制、安慰性的姿态。画面中仅有一名人物和一个机器人，两者全身可见，肩部接触无遮挡，机器人仍然只有两条机械臂和两条腿，光照自然，无文字和水印。",
+        "en": "Create a photorealistic full-body photograph. The adult woman from the first reference image (ref_image_0) stands on the left, and the white-and-orange biped humanoid robot from the second reference image (ref_image_1) stands on the right. Preserve the woman's identity, blue jacket and the complete robot design. The scene is a quiet clinic waiting area. The robot faces the woman and places its left hand gently and clearly on her right shoulder while its right arm rests down. The woman looks downward with lowered eyes, slightly raised inner eyebrows, a downturned mouth, dropped shoulders and a mildly contracted body posture, expressing unmistakable sadness. The robot lowers its head slightly and adopts a restrained comforting posture. Show exactly one human and one robot, both fully visible, with an unobstructed shoulder contact, exactly two robot arms and two robot legs, natural lighting, no text and no watermark."
+      },
+      "negative_prompt": "smiling, laughing, extra people, extra robot, duplicate limbs, extra robot arms, fused shoulder, hand passing through body, changed clothing, changed robot design, text, logo, watermark, cropped feet",
+      "reference_images": [
+        {"file": "human_a_blue_jacket.png", "role": "human_identity_and_clothing"},
+        {"file": "robot_a_white_orange_biped.png", "role": "robot_identity_and_structure"}
+      ],
+      "seed": 24003,
+      "width": 1024,
+      "height": 1024,
+      "num_inference_steps": 28,
+      "evaluation_focus": ["human_identity", "robot_identity", "shoulder_contact", "sad_face", "sad_body_language", "comforting_robot_pose"],
+      "extra": {"relation": "shoulder_touch", "prompt_emotion": "sad", "difficulty": "medium", "pair_id": "emotion-contrast-shoulder-touch-a", "human_ref": "human_a", "robot_ref": "robot_a"}
+    },
+    {
+      "id": "ri-004-angry-shoulder-touch-a",
+      "task_type": "MultiReference",
+      "prompt": {
+        "zh": "生成一张写实全身摄影图。第一张参考图（ref_image_0）中的成年女性站在左侧，第二张参考图（ref_image_1）中的白橙色双足人形机器人站在右侧；保持人物身份、蓝色夹克和完整机器人设计。场景是安静的诊所等候区。机器人面向女性，将左手稳固但不伤害地放在女性右肩上，右臂自然下垂；女性皱紧眉头、眼神直视机器人、嘴唇紧闭、肩部和躯干明显紧张，身体略微前倾，表现明确的愤怒。机器人直视女性并采用坚定、紧张但非攻击性的姿态。保持肩部触碰关系不变。画面中仅有一名人物和一个机器人，两者全身可见，肩部接触清楚，机器人仍然只有两条机械臂和两条腿，光照自然，无文字和水印。",
+        "en": "Create a photorealistic full-body photograph. The adult woman from the first reference image (ref_image_0) stands on the left, and the white-and-orange biped humanoid robot from the second reference image (ref_image_1) stands on the right. Preserve the woman's identity, blue jacket and the complete robot design. The scene is a quiet clinic waiting area. The robot faces the woman and places its left hand firmly but harmlessly on her right shoulder while its right arm rests down. The woman has tightly furrowed eyebrows, direct eye contact with the robot, pressed lips, visibly tense shoulders and torso, and a slight forward lean, expressing unmistakable anger. The robot looks directly at her with a firm tense but nonviolent posture. Keep the shoulder-touch relation unchanged. Show exactly one human and one robot, both fully visible, with a clear shoulder contact, exactly two robot arms and two robot legs, natural lighting, no text and no watermark."
+      },
+      "negative_prompt": "smiling, sad crying expression, physical injury, violence, extra people, extra robot, duplicate limbs, extra robot arms, fused shoulder, changed clothing, changed robot design, text, logo, watermark, cropped feet",
+      "reference_images": [
+        {"file": "human_a_blue_jacket.png", "role": "human_identity_and_clothing"},
+        {"file": "robot_a_white_orange_biped.png", "role": "robot_identity_and_structure"}
+      ],
+      "seed": 24004,
+      "width": 1024,
+      "height": 1024,
+      "num_inference_steps": 28,
+      "evaluation_focus": ["human_identity", "robot_identity", "shoulder_contact", "angry_face", "angry_body_language", "emotion_contrast"],
+      "extra": {"relation": "shoulder_touch", "prompt_emotion": "angry", "difficulty": "medium", "pair_id": "emotion-contrast-shoulder-touch-a", "human_ref": "human_a", "robot_ref": "robot_a"}
+    },
+    {
+      "id": "ri-005-fearful-handshake-b",
+      "task_type": "MultiReference",
+      "prompt": {
+        "zh": "生成一张写实全身摄影图。第一张参考图（ref_image_0）中的成年男性站在左侧，第二张参考图（ref_image_1）中的蓝银色轮式服务机器人站在右侧；严格保持男性的身份、绿色开衫、米色上衣、牛仔裤，并保持机器人的深蓝色头部、琥珀色矩形眼睛、蓝白躯干、两条机械臂、三指夹爪和轮式底座，绝不能把机器人变成双腿。两者在现代办公室大厅握手，男性的右手与机器人的右侧夹爪在腰部高度清晰接触。男性眼睛睁大、嘴部紧张、肩膀抬起、身体略微后仰，空闲左手靠近胸前，表现明确的恐惧和犹豫；机器人动作缓慢谨慎，身体略微后撤。画面中仅有一名人物和一个机器人，双方全身可见，握手接触明确，无多余手臂和手指，无文字和水印。",
+        "en": "Create a photorealistic full-body photograph. The adult man from the first reference image (ref_image_0) stands on the left, and the blue-and-silver wheeled service robot from the second reference image (ref_image_1) stands on the right. Strictly preserve the man's identity, green cardigan, beige shirt and jeans, and preserve the robot's navy head, amber rectangular eyes, blue-white torso, exactly two mechanical arms, three-finger grippers and wheeled base; never turn the robot into a two-legged robot. They shake hands in a modern office lobby, with the man's right hand clearly contacting the robot's right-side gripper at waist height. The man has wide eyes, a tense mouth, raised shoulders, a slightly backward-leaning body and his free left hand near his chest, expressing unmistakable fear and hesitation. The robot moves cautiously and leans slightly backward. Show exactly one human and one robot, both fully visible, with explicit handshake contact, no extra arms or fingers, no text and no watermark."
+      },
+      "negative_prompt": "smiling, confident posture, extra people, extra robot, humanoid robot legs, duplicate wheels, extra arms, extra fingers, fused handshake, changed clothing, changed robot design, text, logo, watermark, cropped feet or wheels",
+      "reference_images": [
+        {"file": "human_b_green_cardigan.png", "role": "human_identity_and_clothing"},
+        {"file": "robot_b_blue_wheeled.png", "role": "robot_identity_and_structure"}
+      ],
+      "seed": 24005,
+      "width": 1024,
+      "height": 1024,
+      "num_inference_steps": 28,
+      "evaluation_focus": ["human_identity", "wheeled_robot_identity", "wheeled_base_preservation", "handshake_contact", "fearful_face", "fearful_body_language"],
+      "extra": {"relation": "handshake", "prompt_emotion": "fearful", "difficulty": "hard", "pair_id": "emotion-contrast-handshake-b", "human_ref": "human_b", "robot_ref": "robot_b"}
+    },
+    {
+      "id": "ri-006-disgusted-handshake-b",
+      "task_type": "MultiReference",
+      "prompt": {
+        "zh": "生成一张写实全身摄影图。第一张参考图（ref_image_0）中的成年男性站在左侧，第二张参考图（ref_image_1）中的蓝银色轮式服务机器人站在右侧；严格保持男性身份和服装，并保持机器人的深蓝色头部、琥珀色矩形眼睛、蓝白躯干、两条机械臂、三指夹爪和轮式底座，绝不能增加人类双腿。两者在现代办公室大厅勉强握手，男性的右手与机器人的右侧夹爪在腰部高度清晰接触。男性皱鼻、上唇抬起、眉毛压低、头部和躯干明显远离机器人，右臂伸直而僵硬，空闲左手略微推拒，表现明确的厌恶和不情愿；机器人缩回肩部并轻微转头。保持握手关系不变。画面中仅有一名人物和一个机器人，双方全身可见，握手接触明确，无多余肢体，无文字和水印。",
+        "en": "Create a photorealistic full-body photograph. The adult man from the first reference image (ref_image_0) stands on the left, and the blue-and-silver wheeled service robot from the second reference image (ref_image_1) stands on the right. Strictly preserve the man's identity and clothing, and preserve the robot's navy head, amber rectangular eyes, blue-white torso, exactly two mechanical arms, three-finger grippers and wheeled base; never add human legs. They perform a reluctant handshake in a modern office lobby, with the man's right hand clearly contacting the robot's right-side gripper at waist height. The man wrinkles his nose, raises his upper lip, lowers his eyebrows, turns his head and torso away from the robot, keeps the shaking arm stiff and extends his free left hand in mild rejection, expressing unmistakable disgust and reluctance. The robot retracts its shoulders and turns its head slightly. Keep the handshake relation unchanged. Show exactly one human and one robot, both fully visible, with explicit handshake contact, no extra limbs, no text and no watermark."
+      },
+      "negative_prompt": "smiling, happy friendly handshake, extra people, extra robot, humanoid robot legs, duplicate wheels, extra arms, extra fingers, fused handshake, changed clothing, changed robot design, text, logo, watermark, cropped feet or wheels",
+      "reference_images": [
+        {"file": "human_b_green_cardigan.png", "role": "human_identity_and_clothing"},
+        {"file": "robot_b_blue_wheeled.png", "role": "robot_identity_and_structure"}
+      ],
+      "seed": 24006,
+      "width": 1024,
+      "height": 1024,
+      "num_inference_steps": 28,
+      "evaluation_focus": ["human_identity", "wheeled_robot_identity", "wheeled_base_preservation", "handshake_contact", "disgusted_face", "avoidance_body_language", "emotion_contrast"],
+      "extra": {"relation": "handshake", "prompt_emotion": "disgusted", "difficulty": "hard", "pair_id": "emotion-contrast-handshake-b", "human_ref": "human_b", "robot_ref": "robot_b"}
+    },
+    {
+      "id": "ri-007-happy-hug-a",
+      "task_type": "MultiReference",
+      "prompt": {
+        "zh": "生成一张写实全身摄影图。第一张参考图（ref_image_0）中的成年女性与第二张参考图（ref_image_1）中的白橙色双足人形机器人在温暖的客厅中正面拥抱。严格保持女性身份、蓝色夹克、白色上衣和深灰色长裤，并保持机器人的白橙配色、黑色面屏、两个青色圆形眼睛、一个头部、一个躯干、两条机械臂、双手和双腿。女性双臂环抱机器人躯干，机器人两条手臂分别自然环绕女性上背部，双方躯干接近但轮廓仍可辨认。女性明显微笑、眼神温暖、肩部放松，身体主动靠近；机器人头部朝向女性，手臂姿态柔和友好。画面中仅有一名人物和一个机器人，双方从头到脚完整可见，遮挡关系真实，手臂数量正确，无肢体融合，无文字和水印。",
+        "en": "Create a photorealistic full-body photograph of the adult woman from the first reference image (ref_image_0) and the white-and-orange biped humanoid robot from the second reference image (ref_image_1) sharing a frontal hug in a warm living room. Strictly preserve the woman's identity, blue jacket, white shirt and charcoal trousers, and preserve the robot's white-orange colors, black face panel, two cyan circular eyes, one head, one torso, exactly two mechanical arms, two hands and two legs. The woman wraps both arms around the robot's torso, while the robot's two arms naturally wrap around her upper back; their torsos are close but their silhouettes remain understandable. The woman shows a clear smile, warm eyes, relaxed shoulders and an actively close body posture; the robot turns its head toward her with gentle friendly arms. Show exactly one human and one robot, both visible from head to feet, with realistic occlusion, correct arm counts, no fused limbs, no text and no watermark."
+      },
+      "negative_prompt": "extra people, extra robot, extra arms, missing arms, fused bodies, merged faces, deformed hands, broken robot joints, changed clothing, changed robot design, text, logo, watermark, cropped feet",
+      "reference_images": [
+        {"file": "human_a_blue_jacket.png", "role": "human_identity_and_clothing"},
+        {"file": "robot_a_white_orange_biped.png", "role": "robot_identity_and_structure"}
+      ],
+      "seed": 24007,
+      "width": 1024,
+      "height": 1024,
+      "num_inference_steps": 28,
+      "evaluation_focus": ["human_identity", "robot_identity", "hug_relation", "two_way_arm_contact", "happy_emotion", "occlusion_reasoning", "limb_integrity"],
+      "extra": {"relation": "hug", "prompt_emotion": "happy", "difficulty": "very_hard", "pair_id": "standalone-hug-a", "human_ref": "human_a", "robot_ref": "robot_a"}
+    },
+    {
+      "id": "ri-008-angry-block-b",
+      "task_type": "MultiReference",
+      "prompt": {
+        "zh": "生成一张写实全身摄影图。第一张参考图（ref_image_0）中的成年男性站在左侧，第二张参考图（ref_image_1）中的蓝银色轮式服务机器人站在右侧；严格保持男性身份、绿色开衫和牛仔裤，并保持机器人的深蓝色头部、琥珀色矩形眼睛、蓝白躯干、两条机械臂、三指夹爪和轮式底座。场景是明亮的机器人实验室。机器人朝男性伸出左侧机械臂，男性用右手掌清晰挡住机器人的左侧前臂，形成明确的阻挡接触；男性皱眉、嘴唇紧闭、下颌紧张，躯干前倾，空闲左手握紧，表现明确的愤怒和拒绝。机器人停止前进，另一条机械臂靠近躯干，轮式底座保持直立。画面不表现伤害。仅有一名人物和一个机器人，双方全身可见，接触点清楚，机器人不能出现人类双腿，无额外肢体、文字或水印。",
+        "en": "Create a photorealistic full-body photograph. The adult man from the first reference image (ref_image_0) stands on the left, and the blue-and-silver wheeled service robot from the second reference image (ref_image_1) stands on the right. Strictly preserve the man's identity, green cardigan and jeans, and preserve the robot's navy head, amber rectangular eyes, blue-white torso, exactly two mechanical arms, three-finger grippers and wheeled base. The scene is a bright robotics laboratory. The robot extends its left mechanical arm toward the man, and the man clearly blocks the robot's left forearm with his right palm, forming an explicit blocking contact. The man has furrowed eyebrows, pressed lips, a tense jaw, a forward-leaning torso and a clenched free left hand, expressing unmistakable anger and refusal. The robot stops moving, keeps its other arm close to its torso and keeps the wheeled base upright. Do not depict injury. Show exactly one human and one robot, both fully visible, with a clear contact point, no human legs on the robot, no extra limbs, no text and no watermark."
+      },
+      "negative_prompt": "physical injury, weapon, extra people, extra robot, humanoid robot legs, duplicate wheels, extra arms, fused contact, deformed fingers, changed clothing, changed robot design, text, logo, watermark, cropped feet or wheels",
+      "reference_images": [
+        {"file": "human_b_green_cardigan.png", "role": "human_identity_and_clothing"},
+        {"file": "robot_b_blue_wheeled.png", "role": "robot_identity_and_structure"}
+      ],
+      "seed": 24008,
+      "width": 1024,
+      "height": 1024,
+      "num_inference_steps": 28,
+      "evaluation_focus": ["human_identity", "wheeled_robot_identity", "wheeled_base_preservation", "blocking_contact", "angry_face", "angry_body_language", "nonviolent_scene"],
+      "extra": {"relation": "push_or_block", "prompt_emotion": "angry", "difficulty": "very_hard", "pair_id": "standalone-block-b", "human_ref": "human_b", "robot_ref": "robot_b"}
+    }
+  ]
+}

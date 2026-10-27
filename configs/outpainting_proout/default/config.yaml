@@ -1,0 +1,13 @@
+external_python: /home/xianxiaole/miniconda3/envs/yankai_outpainting/bin/python
+cpu_offload: false
+research_path: /home/xianxiaole/Code/yankai/projects/pythonlearn/Image-Generate-Filed/Outpainting/research/ProOut/ProOut
+checkpoint: /home/xianxiaole/Code/yankai/projects/pythonlearn/Image-Generate-Filed/Outpainting/output/research/proout/v1/checkpoints/checkpoint-00020148
+base_model: /home/xianxiaole/Code/yankai/projects/Data/Model/Outpainting/stable-diffusion-v1.5-inpainting
+precision: bf16
+window_size: 512
+overlap: 256
+window_schedule: auto
+guidance_scale: 7.0
+ddim_eta: 0.0
+startup_timeout: 900
+generation_timeout: 7200

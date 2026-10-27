@@ -1,0 +1,15 @@
+{
+  "id": 3,
+  "task_type": "t2i",
+  "prompt": {
+    "zh": "一幅精致的日式动画风格插画，描绘了一位年轻的女剑客在日落时分于未来主义摩天大楼间飞跃的场景。她右手紧握着一把散发着青色光芒的武士刀，左手向观者方向伸出，长长的黑色外套在风中向后飘扬。画面运用了强烈的透视缩短手法，背景中可见细节丰富的机械都市；整体采用橙色与青色的色调，线条清晰利落，人体结构严谨，构图呈现出电影般的动态感。",
+    "en": "A polished Japanese anime illustration of a young female swordswoman leaping between futuristic skyscrapers at sunset. Her right hand grips a glowing cyan katana, her left hand reaches toward the viewer, and her long black coat flows backward in the wind. Dramatic foreshortening, a detailed mechanical city in the distance, orange and teal color palette, crisp line art, coherent anatomy, cinematic action composition."
+  },
+  "evaluation_focus": [
+    "dynamic_pose",
+    "foreshortening",
+    "left_right_instruction_following",
+    "anime_line_quality",
+    "human_anatomy"
+  ]
+}

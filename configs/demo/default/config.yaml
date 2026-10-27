@@ -1,0 +1,4 @@
+# Demo Pipeline 不加载模型，仅用于端到端验证工作台。
+cpu_offload: false
+step_delay: 0.04
+
