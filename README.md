@@ -14,8 +14,8 @@
 需要 Python 3.10+；实际模型所需的 PyTorch、Diffusers 或独立环境需另行安装。
 
 ```bash
-git clone git@github.com:yankai233/-visual_generated_eval_workbench.git
-cd -- -visual_generated_eval_workbench
+git clone git@github.com:yankai233/visual_generated_eval_workbench.git
+cd visual_generated_eval_workbench
 python -m pip install -e .
 python -m src.main --server-name 0.0.0.0 --server-port 7861
 ```
